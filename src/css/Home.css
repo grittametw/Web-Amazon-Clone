@@ -1,17 +1,44 @@
 .navbar {
-    background-color:#131921;
+    background-color: #131921;
+}
+
+Nav {
+    font-size: 12px;
+}
+
+a {
+    text-decoration: none;
+    background-color: transparent;
+    border: none;
+    color: white;
+    padding: 8px;
+    margin: 0;
+}
+
+.location:hover,
+.language:hover,
+.lists:hover,
+.returnOrders:hover,
+.cart:hover {
+    border: 1px solid;
+    border-radius: 2px;
+    border-color: #ffffff;
 }
 
 .logo {
     width: 96px;
 }
 
-.searchButton {
-    background-color: #febd69;
+.searchInput {
+    width: 600px;
 }
 
-.menu {
-    position: relative;
+.filterButton {
+    background-color: #c0c0c0;
+}
+
+.searchButton {
+    background-color: #febd69;
 }
 
 .dropdown-content {
@@ -25,33 +52,4 @@
 
 .menu:hover .dropdown-content {
     display: block;
-}
-
-button {
-    padding: 10px;
-}
-
-/* Ensure the navbar maintains a flexible layout */
-.navbar-scroll {
-    display: flex;
-    align-items: center;
-}
-
-.form-container {
-    display: flex;
-    flex-grow: 1;
-    margin-left: 20px;
-    /* Adjust margin as needed */
-}
-
-.form-control {
-    flex-grow: 1;
-    /* Search bar takes available space */
-    min-width: 150px;
-    /* Prevent it from shrinking too much */
-}
-
-.nav-item {
-    margin-left: 20px;
-    /* Adjustable margin for other nav items */
 }

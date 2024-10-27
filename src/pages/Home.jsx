@@ -1,10 +1,5 @@
 import { useState } from 'react'
 import DropdownMenu from '../components/DropdownMenu'
-import Button from 'react-bootstrap/Button'
-import Container from 'react-bootstrap/Container'
-import Form from 'react-bootstrap/Form'
-import Nav from 'react-bootstrap/Nav'
-import Navbar from 'react-bootstrap/Navbar'
 import '../css/Home.css'
 
 const HomePage = () => {
@@ -19,46 +14,46 @@ const HomePage = () => {
   };
 
   return (
-    <Navbar expand="lg" className="navbar navbar-dark">
-      <Container fluid>
-        <Navbar.Brand href="/">
-          <img src="amazon.png" alt="amazon" className="logo ms-2" />
-        </Navbar.Brand>
-        <Navbar.Toggle aria-controls="navbarScroll" />
-        <Navbar.Collapse id="navbarScroll">
-          <Nav
-            className="mt-0"
-            style={{ maxHeight: '100px' }}
-            navbarScroll
-          >
-            <Button variant="outline-success">Deliver to Thailand</Button>
-            <Form className="d-flex">
-              <button variant="outline-success" className="filterButton">All</button>
-              <input
-                type="search"
-                placeholder="Search"
-                className="searchBar"
-                aria-label="Search" />
-              <button variant="outline-success" className="searchButton">Search</button>
-            </Form>
-            <Nav.Link href="#action2">EN</Nav.Link>
-            <div
-              className="menu"
-              onMouseEnter={handleMouseEnter}
-              onMouseLeave={handleMouseLeave}
-            >
-              <button>Dropdown Menu</button>
-              <div className={`dropdown-content ${isDropdownVisible ? 'show' : ''}`}>
-                <DropdownMenu />
-              </div>
-            </div>
+    <div expand="lg" className="navbar navbar-dark d-flex justify-content-between">
+      <a href="/" className="location"><img src="amazon.png" alt="amazon" className="logo" /></a>
+      <a href="#action2" className="location">Deliver to Thailand</a>
 
-            <Nav.Link href="#action1">Returns & Orders</Nav.Link>
-            <Nav.Link href="/cart">Cart</Nav.Link>
-          </Nav>
-        </Navbar.Collapse>
-      </Container>
-    </Navbar>
+      <div className="searchBar d-flex">
+      <button variant="outline-success" className="filterButton">All
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+          <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
+        </svg>
+      </button>
+      <input
+        type="search"
+        placeholder="Search"
+        className="searchInput"
+        aria-label="Search" />
+      <button variant="outline-success" className="searchButton">Search</button>
+      </div>
+
+      <a href="#action2" className="language">EN
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+          <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
+        </svg>
+      </a>
+      <div
+        className="menu"
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+      >
+        <a href="#action3" className="lists">Hello, sign in Account & Lists
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+            <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
+          </svg>
+        </a>
+        <div className={`dropdown-content ${isDropdownVisible ? 'show' : ''}`}>
+          <DropdownMenu />
+        </div>
+      </div>
+      <a href="#action1" className="returnOrders">Returns & Orders</a>
+      <a href="/cart" className="cart">Cart</a>
+    </div>
   );
 }
 
