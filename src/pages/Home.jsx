@@ -14,6 +14,10 @@ const HomePage = () => {
     setDropdownVisible(false)
   };
 
+  const [isNavCollapsed, setIsNavCollapsed] = useState(true);
+
+  const handleNavCollapse = () => setIsNavCollapsed(!isNavCollapsed);
+
   return (
     <body>
       <nav expand="lg" className="navBar navbar-dark d-flex justify-content-between align-items-center">
@@ -50,7 +54,7 @@ const HomePage = () => {
           </svg>
         </a>
         <div
-          className="menu"
+          className="sign"
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
         >
@@ -67,36 +71,46 @@ const HomePage = () => {
         <a href="/cart" className="cart">Cart</a>
       </nav>
 
-      <div class="b">
-        <nav class="navBarP navbar-dark d-flex align-items-center">
-          <button class="navbar-toggler d-flex align-items-center" type="button">
-            <span class="navbar-toggler-icon"></span>
+      <div className="b">
+        <nav className="navBarP navbar-dark d-flex align-items-center">
+          <button className="navbar-toggler d-flex align-items-center" type="button" data-toggle="collapse" data-target="#list-example" aria-controls="list-example" aria-expanded={!isNavCollapsed ? true : false} aria-label="Toggle navigation" onClick={handleNavCollapse}>
+            <span className="navbar-toggler-icon"></span>
             All
           </button>
-          <button class="navbar-toggler" type="button">
-            Today's Deals
-          </button>
-          <button class="navbar-toggler" type="button">
-            Customer Service
-          </button>
-          <button class="navbar-toggler" type="button">
-            Registry
-          </button>
-          <button class="navbar-toggler" type="button">
-            Gift Cards
-          </button>
-          <button class="navbar-toggler" type="button">
-            Sell
-          </button>
+
+          <div className="nav-xshop d-flex align-items-center">
+            <a href="" className="navbar-b">
+              Today's Deals
+            </a>
+            <a href="" className="navbar-b">
+              Customer Service
+            </a>
+            <a href="" className="navbar-b">
+              Registry
+            </a>
+            <a href="" className="navbar-b">
+              Gift Cards
+            </a>
+            <a href="" className="navbar-b">
+              Sell
+            </a>
+          </div>
         </nav>
 
-        <div id="list-example" class="list-group">
-          <button class="amazonMusicButton">Amazon Music
-            <a class="list-group-item list-group-item-action" href="#list-item-1">Item 1</a>
-            <a class="list-group-item list-group-item-action" href="#list-item-2">Item2</a>
-            <a class="list-group-item list-group-item-action" href="#list-item-3">Item 3</a>
-            <a class="list-group-item list-group-item-action" href="#list-item-4">Item 4</a>
-          </button>
+        <div className={`${isNavCollapsed ? 'collapse' : ''} list-group`} id="list-example" >
+          <nav className="menu">
+            <div className="menu-title d-flex">
+              Hello, sign in
+            </div>
+            <div>
+              <button className="amazonMusicButton">Amazon Music
+                <a className="list-group-item list-group-item-action" href="#list-item-1">Item 1</a>
+                <a className="list-group-item list-group-item-action" href="#list-item-2">Item2</a>
+                <a className="list-group-item list-group-item-action" href="#list-item-3">Item 3</a>
+                <a className="list-group-item list-group-item-action" href="#list-item-4">Item 4</a>
+              </button>
+            </div>
+          </nav>
         </div>
       </div>
     </body>

@@ -5,14 +5,22 @@ body {
 
 .navBar {
     width: 100%;
+    height: 56px;
     background-color: #131921;
     padding: 5px 10px;
 }
 
 .navBarP {
     width: 100%;
+    height: 40px;
     background-color: #232f3e;
     padding: 0 10px;
+}
+
+.menu {
+    width: 50%;
+    height: 100%;
+    background-color: #227be8;
 }
 
 a {
@@ -114,13 +122,28 @@ div {
 }
 
 .navBarP button {
+    border: none;
     font-size: 12px;
-    padding: 8px;
+    padding: 10px 8px;
     color: #ffffff;
 }
 
-.navBarP button:hover {
+.navBarP a {
+    border: none;
+    font-size: 14px;
+    padding: 10.5px;
+    color: #ffffff;
+}
+
+.navBarP button:hover,
+.navBarP a:hover {
     border: 1px solid;
     border-radius: 2px;
     border-color: #ffffff;
+}
+
+.menu-title {
+    width: 100%;
+    font-size: 24px;
+    padding: 8px;
 }
