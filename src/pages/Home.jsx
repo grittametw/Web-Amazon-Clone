@@ -16,7 +16,10 @@ const HomePage = () => {
 
   const [isNavCollapsed, setIsNavCollapsed] = useState(true);
 
+  const [isNavCollapsed2, setIsNavCollapsed2] = useState(true);
+
   const handleNavCollapse = () => setIsNavCollapsed(!isNavCollapsed);
+  const handleNavCollapse2 = () => setIsNavCollapsed2(!isNavCollapsed2);
 
   return (
     <body>
@@ -31,7 +34,7 @@ const HomePage = () => {
         </a>
 
         <div className="searchBar d-flex">
-          <button variant="outline-success" className="filterButton">All
+          <button variant="outline-success" className="filterButton d-flex align-items-center">All
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
               <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
             </svg>
@@ -48,20 +51,21 @@ const HomePage = () => {
           </button>
         </div>
 
-        <a href="#action2" className="language">EN
+        <a href="#action2" className="language d-flex align-items-center">
+          <img src="us-flag.png" alt="us-flag" className="us-flag" />EN
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
             <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
           </svg>
         </a>
         <div
-          className="sign"
+          className="sign d-flex"
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
         >
-          <a href="#action3" className="lists">Hello, sign in Account & Lists
+          <a href="#action3" className="lists">Hello, sign in<p>Account & Lists
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
               <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
-            </svg>
+            </svg></p>
           </a>
           <div className={`dropdown-content ${isDropdownVisible ? 'show' : ''}`}>
             <DropdownMenu />
@@ -97,13 +101,25 @@ const HomePage = () => {
           </div>
         </nav>
 
-        <div className={`${isNavCollapsed ? 'collapse' : ''} list-group`} id="list-example" >
+        <div className={`${isNavCollapsed ? 'collapse' : ''} list-group`} id="list-example">
           <nav className="menu">
-            <div className="menu-title d-flex">
+            <div className="menu-title">
               Hello, sign in
             </div>
-            <div>
-              <button className="amazonMusicButton">Amazon Music
+            <div className="menu-info">
+              <button className="amazonMusicButton" type="button" data-toggle="collapse" data-target="#list-example" aria-controls="list-example" aria-expanded={!isNavCollapsed2 ? true : false} aria-label="Toggle navigation" onClick={handleNavCollapse2}>Amazon Music
+              </button>
+            </div>
+          </nav>
+        </div>
+
+        <div className={`${isNavCollapsed2 ? 'collapse' : ''} list-group`} id="list-example">
+          <nav className="menu">
+            <div className="menu-title">
+              Hello, sign in
+            </div>
+            <div className="menu-info">
+              <button className="amazonMusicButton" >MAIN MENU
                 <a className="list-group-item list-group-item-action" href="#list-item-1">Item 1</a>
                 <a className="list-group-item list-group-item-action" href="#list-item-2">Item2</a>
                 <a className="list-group-item list-group-item-action" href="#list-item-3">Item 3</a>
