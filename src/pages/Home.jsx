@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import ArrowForwardIosOutlinedIcon from '@mui/icons-material/ArrowForwardIosOutlined';
 import DropdownMenu from '../components/DropdownMenu'
 import '../css/Home.css'
 
@@ -72,7 +72,9 @@ const HomePage = () => {
           </div>
         </div>
         <a href="#action1" className="returnOrders">Returns <p>& Orders</p></a>
-        <a href="/cart" className="cart">Cart</a>
+        <a href="/cart" className="cartButton d-flex align-items-end">
+          <img src="cart.svg" alt="cart" className="cart" />Cart
+        </a>
       </nav>
 
       <div className="b">
@@ -107,7 +109,18 @@ const HomePage = () => {
               Hello, sign in
             </div>
             <div className="menu-info">
-              <button className="amazonMusicButton" type="button" data-toggle="collapse" data-target="#list-example" aria-controls="list-example" aria-expanded={!isNavCollapsed2 ? true : false} aria-label="Toggle navigation" onClick={handleNavCollapse2}>Amazon Music
+              Digital Content & Devices
+              <button
+                className="amazonMusicButton d-flex justify-content-between"
+                type="button"
+                data-toggle="collapse"
+                data-target="#list-example"
+                aria-controls="list-example"
+                aria-expanded={!isNavCollapsed2 ? true : false}
+                aria-label="Toggle navigation"
+                onClick={handleNavCollapse2}>
+                Amazon Music
+                <ArrowForwardIosOutlinedIcon />
               </button>
             </div>
           </nav>

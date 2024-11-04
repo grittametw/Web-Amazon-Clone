@@ -20,7 +20,7 @@ body {
 .menu {
     width: 50%;
     height: 100%;
-    background-color: #227be8;
+    background-color: #ffffff;
 }
 
 a {
@@ -31,6 +31,11 @@ a {
     color: rgb(255, 255, 255);
     padding: 8px;
     margin: 0;
+}
+
+.cartButton {
+    font-size: 14px;
+    font-weight: 600;
 }
 
 p {
@@ -58,7 +63,7 @@ div {
 .language:hover,
 .lists:hover,
 .returnOrders:hover,
-.cart:hover {
+.cartButton:hover {
     border: 1px solid;
     border-radius: 2px;
     border-color: #ffffff;
@@ -78,7 +83,6 @@ div {
 
 .bi-geo-alt {
     width: 24px;
-    margin-right: 2px;
 }
 
 .us-flag {
@@ -100,6 +104,11 @@ div {
 
 .lists .bi-caret-down-fill {
     margin-left: 4px;
+}
+
+.cart {
+    width: 32px;
+    margin-right: 4px;
 }
 
 .bi-search {
@@ -171,6 +180,13 @@ div {
 .menu-title {
     width: 100%;
     font-size: 24px;
+    background-color: #febd69;
+    padding: 8px;
+}
+
+.menu-info {
+    width: 100%;
+    background-color: #8469fe;
     padding: 8px;
 }
 
@@ -178,5 +194,5 @@ div {
     width: 100%;
     font-size: 16px;
     border: none;
-    padding: 0;
+    padding: 8px;
 }
