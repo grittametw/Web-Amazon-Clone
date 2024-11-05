@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import ArrowForwardIosOutlinedIcon from '@mui/icons-material/ArrowForwardIosOutlined';
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import DropdownMenu from '../components/DropdownMenu'
 import '../css/Home.css'
 
@@ -85,19 +86,19 @@ const HomePage = () => {
           </button>
 
           <div className="nav-xshop d-flex align-items-center">
-            <a href="" className="navbar-b">
+            <a href="/" className="navbar-b">
               Today's Deals
             </a>
-            <a href="" className="navbar-b">
+            <a href="/" className="navbar-b">
               Customer Service
             </a>
-            <a href="" className="navbar-b">
+            <a href="/" className="navbar-b">
               Registry
             </a>
-            <a href="" className="navbar-b">
+            <a href="/" className="navbar-b">
               Gift Cards
             </a>
-            <a href="" className="navbar-b">
+            <a href="/" className="navbar-b">
               Sell
             </a>
           </div>
@@ -105,39 +106,62 @@ const HomePage = () => {
 
         <div className={`${isNavCollapsed ? 'collapse' : ''} list-group`} id="list-example">
           <nav className="menu">
-            <div className="menu-title">
+            <div className="menu-title d-flex align-items-center">
+              <AccountCircleIcon sx={{ fontSize: 28, color: '#ffffff', mr: 1 }} />
               Hello, sign in
             </div>
             <div className="menu-info">
-              Digital Content & Devices
-              <button
-                className="amazonMusicButton d-flex justify-content-between"
-                type="button"
-                data-toggle="collapse"
-                data-target="#list-example"
-                aria-controls="list-example"
-                aria-expanded={!isNavCollapsed2 ? true : false}
-                aria-label="Toggle navigation"
-                onClick={handleNavCollapse2}>
-                Amazon Music
-                <ArrowForwardIosOutlinedIcon />
-              </button>
+              <div className="menu-info-group">
+                <h4>Digital Content & Devices</h4>
+                <button
+                  className="amazonMusicButton d-flex justify-content-between align-items-center"
+                  type="button"
+                  data-toggle="collapse"
+                  data-target="#list-example"
+                  aria-controls="list-example"
+                  aria-expanded={!isNavCollapsed2 ? true : false}
+                  aria-label="Toggle navigation"
+                  onClick={handleNavCollapse2}>
+                  Amazon Music
+                  <ArrowForwardIosOutlinedIcon sx={{ fontSize: 16, color: '#c0c0c0' }} />
+                </button>
+                <button
+                  className="amazonMusicButton d-flex justify-content-between align-items-center"
+                  type="button"
+                  data-toggle="collapse"
+                  data-target="#list-example"
+                  aria-controls="list-example"
+                  aria-expanded={!isNavCollapsed2 ? true : false}
+                  aria-label="Toggle navigation"
+                  onClick={handleNavCollapse2}>
+                  Kindle E-readers & Books
+                  <ArrowForwardIosOutlinedIcon sx={{ fontSize: 16, color: '#c0c0c0' }} />
+                </button>
+                <button
+                  className="amazonMusicButton d-flex justify-content-between align-items-center"
+                  type="button"
+                  data-toggle="collapse"
+                  data-target="#list-example"
+                  aria-controls="list-example"
+                  aria-expanded={!isNavCollapsed2 ? true : false}
+                  aria-label="Toggle navigation"
+                  onClick={handleNavCollapse2}>
+                  Amazon Appstore
+                  <ArrowForwardIosOutlinedIcon sx={{ fontSize: 16, color: '#c0c0c0' }} />
+                </button>
+              </div>
             </div>
           </nav>
         </div>
 
         <div className={`${isNavCollapsed2 ? 'collapse' : ''} list-group`} id="list-example">
           <nav className="menu">
-            <div className="menu-title">
-              Hello, sign in
-            </div>
             <div className="menu-info">
-              <button className="amazonMusicButton" >MAIN MENU
-                <a className="list-group-item list-group-item-action" href="#list-item-1">Item 1</a>
+              <button className="amazonMusicButton d-flex" >MAIN MENU</button>
+              <div><a className="list-group-item list-group-item-action" href="#list-item-1">Item 1</a>
                 <a className="list-group-item list-group-item-action" href="#list-item-2">Item2</a>
                 <a className="list-group-item list-group-item-action" href="#list-item-3">Item 3</a>
-                <a className="list-group-item list-group-item-action" href="#list-item-4">Item 4</a>
-              </button>
+                <a className="list-group-item list-group-item-action" href="#list-item-4">Item 4</a></div>
             </div>
           </nav>
         </div>
