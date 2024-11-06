@@ -10,16 +10,36 @@ body {
     padding: 5px 10px;
 }
 
-.navBarP {
+.navBarB {
     width: 100%;
     height: 40px;
     background-color: #232f3e;
     padding: 0 10px;
 }
 
-.menu {
-    width: 400px;
+.list-group {
+    width: 0;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: scroll;
+    transition: 0.3s;
+    z-index: 1;
     background-color: #ffffff;
+}
+
+.list-group.open {
+    width: 350px;
+}
+
+.list-group .menuCloseBtn {
+    position: absolute;
+    top: 8px;
+    left: 300px;
+    z-index: 1;
+    font-size: 28px;
+    color: white;
 }
 
 a {
@@ -155,22 +175,22 @@ div {
     display: block;
 }
 
-.navBarP button {
+.navBarB button {
     border: none;
     font-size: 12px;
     padding: 10px 8px;
     color: #ffffff;
 }
 
-.navBarP a {
+.navBarB a {
     border: none;
     font-size: 14px;
     padding: 10.5px;
     color: #ffffff;
 }
 
-.navBarP button:hover,
-.navBarP a:hover {
+.navBarB button:hover,
+.navBarB a:hover {
     border: 1px solid;
     border-radius: 2px;
     border-color: #ffffff;
@@ -188,13 +208,12 @@ div {
     width: 100%;
     font-size: 24px;
     color: #ffffff;
-    background-color: #febd69;
+    background-color: #232f3e;
     padding: 8px 0 8px 32px;
 }
 
 .menu-info {
     width: 100%;
-    height: 400px;
     background-color: #8469fe;
 }
 
@@ -203,6 +222,7 @@ div {
     background-color: #03ffe2;
     border-bottom: 1px solid;
     border-color: #c0c0c0;
+    padding-bottom: 4px;
 }
 
 h4 {

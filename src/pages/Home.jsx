@@ -7,6 +7,10 @@ import '../css/Home.css'
 const HomePage = () => {
   const [isDropdownVisible, setDropdownVisible] = useState(false);
 
+  const [isNavCollapsed, setIsNavCollapsed] = useState(true);
+  const [isNavCollapsed2, setIsNavCollapsed2] = useState(true);
+  const [isSidebarOpen, setSidebarOpen] = useState(false);
+
   const handleMouseEnter = () => {
     setDropdownVisible(true)
   };
@@ -15,15 +19,14 @@ const HomePage = () => {
     setDropdownVisible(false)
   };
 
-  const [isNavCollapsed, setIsNavCollapsed] = useState(true);
-
-  const [isNavCollapsed2, setIsNavCollapsed2] = useState(true);
-
   const handleNavCollapse = () => setIsNavCollapsed(!isNavCollapsed);
   const handleNavCollapse2 = () => setIsNavCollapsed2(!isNavCollapsed2);
 
+  const openNav = () => setSidebarOpen(true);
+  const closeNav = () => setSidebarOpen(false);
+
   return (
-    <body>
+    <body className={isSidebarOpen ? 'sidebar-open' : ''}>
       <nav expand="lg" className="navBar navbar-dark d-flex justify-content-between align-items-center">
         <a href="/" className="web"><img src="amazon.png" alt="amazon" className="logo" /></a>
         <a href="#action2" className="location d-flex">
@@ -78,9 +81,9 @@ const HomePage = () => {
         </a>
       </nav>
 
-      <div className="b">
-        <nav className="navBarP navbar-dark d-flex align-items-center">
-          <button className="navbar-toggler d-flex align-items-center" type="button" data-toggle="collapse" data-target="#list-example" aria-controls="list-example" aria-expanded={!isNavCollapsed ? true : false} aria-label="Toggle navigation" onClick={handleNavCollapse}>
+      <div className="B">
+        <nav className="navBarB navbar-dark d-flex align-items-center">
+          <button className="navbar-toggler d-flex align-items-center" onClick={openNav}>
             <span className="navbar-toggler-icon"></span>
             All
           </button>
@@ -104,8 +107,13 @@ const HomePage = () => {
           </div>
         </nav>
 
-        <div className={`${isNavCollapsed ? 'collapse' : ''} list-group`} id="list-example">
+        <div className={`list-group ${isSidebarOpen ? 'open' : ''}`} id="list-example">
           <nav className="menu">
+            <button
+              className="menuCloseBtn"
+              onClick={closeNav}>
+              &times;
+            </button>
             <div className="menu-title d-flex align-items-center">
               <AccountCircleIcon sx={{ fontSize: 28, color: '#ffffff', mr: 1 }} />
               Hello, sign in
@@ -150,11 +158,134 @@ const HomePage = () => {
                   <ArrowForwardIosOutlinedIcon sx={{ fontSize: 16, color: '#c0c0c0' }} />
                 </button>
               </div>
+              <div className="menu-info-group">
+                <h4>Shop by Department</h4>
+                <button
+                  className="amazonMusicButton d-flex justify-content-between align-items-center"
+                  type="button"
+                  data-toggle="collapse"
+                  data-target="#list-example"
+                  aria-controls="list-example"
+                  aria-expanded={!isNavCollapsed2 ? true : false}
+                  aria-label="Toggle navigation"
+                  onClick={handleNavCollapse2}>
+                  Electronics
+                  <ArrowForwardIosOutlinedIcon sx={{ fontSize: 16, color: '#c0c0c0' }} />
+                </button>
+                <button
+                  className="amazonMusicButton d-flex justify-content-between align-items-center"
+                  type="button"
+                  data-toggle="collapse"
+                  data-target="#list-example"
+                  aria-controls="list-example"
+                  aria-expanded={!isNavCollapsed2 ? true : false}
+                  aria-label="Toggle navigation"
+                  onClick={handleNavCollapse2}>
+                  Computers
+                  <ArrowForwardIosOutlinedIcon sx={{ fontSize: 16, color: '#c0c0c0' }} />
+                </button>
+                <button
+                  className="amazonMusicButton d-flex justify-content-between align-items-center"
+                  type="button"
+                  data-toggle="collapse"
+                  data-target="#list-example"
+                  aria-controls="list-example"
+                  aria-expanded={!isNavCollapsed2 ? true : false}
+                  aria-label="Toggle navigation"
+                  onClick={handleNavCollapse2}>
+                  Smart Home
+                  <ArrowForwardIosOutlinedIcon sx={{ fontSize: 16, color: '#c0c0c0' }} />
+                </button>
+                <button
+                  className="amazonMusicButton d-flex justify-content-between align-items-center"
+                  type="button"
+                  data-toggle="collapse"
+                  data-target="#list-example"
+                  aria-controls="list-example"
+                  aria-expanded={!isNavCollapsed2 ? true : false}
+                  aria-label="Toggle navigation"
+                  onClick={handleNavCollapse2}>
+                  Arts & Crafts
+                  <ArrowForwardIosOutlinedIcon sx={{ fontSize: 16, color: '#c0c0c0' }} />
+                </button>
+                <button
+                  className="amazonMusicButton d-flex justify-content-between align-items-center"
+                  type="button"
+                  data-toggle="collapse"
+                  data-target="#list-example"
+                  aria-controls="list-example"
+                  aria-expanded={!isNavCollapsed2 ? true : false}
+                  aria-label="Toggle navigation"
+                  onClick={handleNavCollapse2}>
+                  See all
+                  <ArrowForwardIosOutlinedIcon sx={{ fontSize: 16, color: '#c0c0c0' }} />
+                </button>
+              </div>
+              <div className="menu-info-group">
+                <h4>Programs & Features</h4>
+                <button
+                  className="amazonMusicButton d-flex justify-content-between align-items-center"
+                  type="button"
+                  data-toggle="collapse"
+                  data-target="#list-example"
+                  aria-controls="list-example"
+                  aria-expanded={!isNavCollapsed2 ? true : false}
+                  aria-label="Toggle navigation"
+                  onClick={handleNavCollapse2}>
+                  Gift Cards
+                  <ArrowForwardIosOutlinedIcon sx={{ fontSize: 16, color: '#c0c0c0' }} />
+                </button>
+                <a href="/" className="d-flex align-items-center">Shop By Interest</a>
+                <button
+                  className="amazonMusicButton d-flex justify-content-between align-items-center"
+                  type="button"
+                  data-toggle="collapse"
+                  data-target="#list-example"
+                  aria-controls="list-example"
+                  aria-expanded={!isNavCollapsed2 ? true : false}
+                  aria-label="Toggle navigation"
+                  onClick={handleNavCollapse2}>
+                  Amazon Live
+                  <ArrowForwardIosOutlinedIcon sx={{ fontSize: 16, color: '#c0c0c0' }} />
+                </button>
+                <button
+                  className="amazonMusicButton d-flex justify-content-between align-items-center"
+                  type="button"
+                  data-toggle="collapse"
+                  data-target="#list-example"
+                  aria-controls="list-example"
+                  aria-expanded={!isNavCollapsed2 ? true : false}
+                  aria-label="Toggle navigation"
+                  onClick={handleNavCollapse2}>
+                  International Shopping
+                  <ArrowForwardIosOutlinedIcon sx={{ fontSize: 16, color: '#c0c0c0' }} />
+                </button>
+                <button
+                  className="amazonMusicButton d-flex justify-content-between align-items-center"
+                  type="button"
+                  data-toggle="collapse"
+                  data-target="#list-example"
+                  aria-controls="list-example"
+                  aria-expanded={!isNavCollapsed2 ? true : false}
+                  aria-label="Toggle navigation"
+                  onClick={handleNavCollapse2}>
+                  See all
+                  <ArrowForwardIosOutlinedIcon sx={{ fontSize: 16, color: '#c0c0c0' }} />
+                </button>
+              </div>
+              <div className="menu-info-group">
+                <h4>Help & Settings</h4>
+                <a href="/" className="d-flex align-items-center">Your Account</a>
+                <a href="/" className="d-flex align-items-center">English</a>
+                <a href="/" className="d-flex align-items-center">United States</a>
+                <a href="/" className="d-flex align-items-center">Customer Service</a>
+                <a href="/" className="d-flex align-items-center">Sign in</a>
+              </div>
             </div>
           </nav>
         </div>
 
-        <div className={`${isNavCollapsed2 ? 'collapse' : ''} list-group`} id="list-example">
+        <div className={`asd ${isSidebarOpen ? 'open' : ''}`} id="list-example">
           <nav className="menu">
             <div className="menu-info">
               <button className="amazonMusicButton d-flex" >MAIN MENU</button>
