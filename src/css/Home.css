@@ -30,7 +30,7 @@ body {
 }
 
 .list-group.open {
-    width: 350px;
+    width: 330px;
 }
 
 .list-group .menuCloseBtn {
@@ -40,6 +40,22 @@ body {
     z-index: 1;
     font-size: 28px;
     color: white;
+}
+
+.asd {
+    width: 0;
+    height: 100%;
+    position: absolute;
+    top: 44px;
+    left: 0;
+    overflow: scroll;
+    transition: 0.3s;
+    z-index: 1;
+    background-color: #ffffff;
+}
+
+.asd.open {
+    width: 330px;
 }
 
 a {
@@ -52,9 +68,28 @@ a {
     margin: 0;
 }
 
-.cartButton {
-    font-size: 14px;
-    font-weight: 600;
+.list-group a {
+    width: 100%;
+    font-size: 12px;
+    border: none;
+    color: #000000;
+    padding: 12px 16px 12px 32px;
+}
+
+.list-group a:hover {
+    background-color: #c0c0c0;
+}
+
+.asd a {
+    width: 100%;
+    font-size: 12px;
+    border: none;
+    color: #000000;
+    padding: 12px 16px 12px 32px;
+}
+
+.asd a:hover {
+    background-color: #c0c0c0;
 }
 
 p {
@@ -62,6 +97,12 @@ p {
     font-size: 14px;
     margin: 0;
 }
+
+.cartButton {
+    font-size: 14px;
+    font-weight: 600;
+}
+
 
 .lists p {
     font-weight: 600;
@@ -204,9 +245,24 @@ div {
     background-color: #c0c0c0;
 }
 
+.menu-info button {
+    width: 100%;
+    font-size: 12px;
+    border: none;
+    padding: 12px 16px 12px 32px;
+}
+
+.seeAllButton {
+    width: 100%;
+    font-size: 12px;
+    border: none;
+    padding: 4px 16px 4px 32px;
+}
+
 .menu-title {
     width: 100%;
-    font-size: 24px;
+    font-size: 16px;
+    font-weight: 600;
     color: #ffffff;
     background-color: #232f3e;
     padding: 8px 0 8px 32px;
@@ -214,26 +270,18 @@ div {
 
 .menu-info {
     width: 100%;
-    background-color: #8469fe;
+    padding-bottom: 24px;
 }
 
 .menu-info-group {
     width: 100%;
-    background-color: #03ffe2;
     border-bottom: 1px solid;
     border-color: #c0c0c0;
     padding-bottom: 4px;
 }
 
-h4 {
-    background-color: #90f000;
-    padding: 16px 0 8px 32px;
+h6 {
+    font-weight: 600;
+    padding: 20px 0 8px 32px;
     margin: 0;
-}
-
-.amazonMusicButton {
-    width: 100%;
-    font-size: 16px;
-    border: none;
-    padding: 12px 16px 12px 32px;
 }

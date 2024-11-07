@@ -1,6 +1,9 @@
 import { useState } from 'react'
 import ArrowForwardIosOutlinedIcon from '@mui/icons-material/ArrowForwardIosOutlined';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import LanguageIcon from '@mui/icons-material/Language';
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import DropdownMenu from '../components/DropdownMenu'
 import '../css/Home.css'
 
@@ -9,7 +12,8 @@ const HomePage = () => {
 
   const [isNavCollapsed, setIsNavCollapsed] = useState(true);
   const [isNavCollapsed2, setIsNavCollapsed2] = useState(true);
-  const [isSidebarOpen, setSidebarOpen] = useState(false);
+  const [isSidebarOpen1, setSidebarOpen1] = useState(false);
+  const [isSidebarOpen2, setSidebarOpen2] = useState(false);
 
   const handleMouseEnter = () => {
     setDropdownVisible(true)
@@ -22,11 +26,13 @@ const HomePage = () => {
   const handleNavCollapse = () => setIsNavCollapsed(!isNavCollapsed);
   const handleNavCollapse2 = () => setIsNavCollapsed2(!isNavCollapsed2);
 
-  const openNav = () => setSidebarOpen(true);
-  const closeNav = () => setSidebarOpen(false);
+  const openMenu1 = () => setSidebarOpen1(true);
+  const closeMenu1 = () => setSidebarOpen1(false);
+  const openMenu2 = () => setSidebarOpen2(true);
+  const closeMenu2 = () => setSidebarOpen2(false);
 
   return (
-    <body className={isSidebarOpen ? 'sidebar-open' : ''}>
+    <body className={isSidebarOpen1 ? 'sidebar-open' : ''}>
       <nav expand="lg" className="navBar navbar-dark d-flex justify-content-between align-items-center">
         <a href="/" className="web"><img src="amazon.png" alt="amazon" className="logo" /></a>
         <a href="#action2" className="location d-flex">
@@ -83,7 +89,7 @@ const HomePage = () => {
 
       <div className="B">
         <nav className="navBarB navbar-dark d-flex align-items-center">
-          <button className="navbar-toggler d-flex align-items-center" onClick={openNav}>
+          <button className="navbar-toggler d-flex align-items-center" onClick={openMenu1}>
             <span className="navbar-toggler-icon"></span>
             All
           </button>
@@ -107,11 +113,11 @@ const HomePage = () => {
           </div>
         </nav>
 
-        <div className={`list-group ${isSidebarOpen ? 'open' : ''}`} id="list-example">
+        <div className={`list-group ${isSidebarOpen1 ? 'open' : ''}`} id="list-example">
           <nav className="menu">
             <button
               className="menuCloseBtn"
-              onClick={closeNav}>
+              onClick={closeMenu1}>
               &times;
             </button>
             <div className="menu-title d-flex align-items-center">
@@ -120,16 +126,10 @@ const HomePage = () => {
             </div>
             <div className="menu-info">
               <div className="menu-info-group">
-                <h4>Digital Content & Devices</h4>
+                <h6>Digital Content & Devices</h6>
                 <button
                   className="amazonMusicButton d-flex justify-content-between align-items-center"
-                  type="button"
-                  data-toggle="collapse"
-                  data-target="#list-example"
-                  aria-controls="list-example"
-                  aria-expanded={!isNavCollapsed2 ? true : false}
-                  aria-label="Toggle navigation"
-                  onClick={handleNavCollapse2}>
+                  onClick={openMenu2}>
                   Amazon Music
                   <ArrowForwardIosOutlinedIcon sx={{ fontSize: 16, color: '#c0c0c0' }} />
                 </button>
@@ -159,7 +159,7 @@ const HomePage = () => {
                 </button>
               </div>
               <div className="menu-info-group">
-                <h4>Shop by Department</h4>
+                <h6>Shop by Department</h6>
                 <button
                   className="amazonMusicButton d-flex justify-content-between align-items-center"
                   type="button"
@@ -209,7 +209,7 @@ const HomePage = () => {
                   <ArrowForwardIosOutlinedIcon sx={{ fontSize: 16, color: '#c0c0c0' }} />
                 </button>
                 <button
-                  className="amazonMusicButton d-flex justify-content-between align-items-center"
+                  className="seeAllButton d-flex align-items-center"
                   type="button"
                   data-toggle="collapse"
                   data-target="#list-example"
@@ -218,11 +218,11 @@ const HomePage = () => {
                   aria-label="Toggle navigation"
                   onClick={handleNavCollapse2}>
                   See all
-                  <ArrowForwardIosOutlinedIcon sx={{ fontSize: 16, color: '#c0c0c0' }} />
+                  <ExpandMoreIcon sx={{ fontSize: 24, color: '#c0c0c0' }} />
                 </button>
               </div>
               <div className="menu-info-group">
-                <h4>Programs & Features</h4>
+                <h6>Programs & Features</h6>
                 <button
                   className="amazonMusicButton d-flex justify-content-between align-items-center"
                   type="button"
@@ -261,7 +261,7 @@ const HomePage = () => {
                   <ArrowForwardIosOutlinedIcon sx={{ fontSize: 16, color: '#c0c0c0' }} />
                 </button>
                 <button
-                  className="amazonMusicButton d-flex justify-content-between align-items-center"
+                  className="seeAllButton d-flex align-items-center"
                   type="button"
                   data-toggle="collapse"
                   data-target="#list-example"
@@ -270,14 +270,20 @@ const HomePage = () => {
                   aria-label="Toggle navigation"
                   onClick={handleNavCollapse2}>
                   See all
-                  <ArrowForwardIosOutlinedIcon sx={{ fontSize: 16, color: '#c0c0c0' }} />
+                  <ExpandMoreIcon sx={{ fontSize: 24, color: '#c0c0c0' }} />
                 </button>
               </div>
               <div className="menu-info-group">
-                <h4>Help & Settings</h4>
+                <h6>Help & Settings</h6>
                 <a href="/" className="d-flex align-items-center">Your Account</a>
-                <a href="/" className="d-flex align-items-center">English</a>
-                <a href="/" className="d-flex align-items-center">United States</a>
+                <a href="/" className="d-flex align-items-center">
+                  <LanguageIcon sx={{ fontSize: 14, color: '#c0c0c0', mr: 1 }} />
+                  English
+                </a>
+                <a href="/" className="d-flex align-items-center">
+                  <img src="us-flag.png" alt="us-flag" className="us-flag" />
+                  United States
+                </a>
                 <a href="/" className="d-flex align-items-center">Customer Service</a>
                 <a href="/" className="d-flex align-items-center">Sign in</a>
               </div>
@@ -285,14 +291,23 @@ const HomePage = () => {
           </nav>
         </div>
 
-        <div className={`asd ${isSidebarOpen ? 'open' : ''}`} id="list-example">
+        <div className={`asd ${isSidebarOpen2 ? 'open' : ''}`} id="list-example">
           <nav className="menu">
             <div className="menu-info">
-              <button className="amazonMusicButton d-flex" >MAIN MENU</button>
-              <div><a className="list-group-item list-group-item-action" href="#list-item-1">Item 1</a>
-                <a className="list-group-item list-group-item-action" href="#list-item-2">Item2</a>
-                <a className="list-group-item list-group-item-action" href="#list-item-3">Item 3</a>
-                <a className="list-group-item list-group-item-action" href="#list-item-4">Item 4</a></div>
+              <button
+                className="amazonMusicButton d-flex align-items-center"
+                onClick={closeMenu2}>
+                <ArrowBackIcon sx={{ fontSize: 20, color: '#c0c0c0', mr: 1 }} />
+                MAIN MENU
+              </button>
+              <div className="menu-info-group">
+                <h6>Stream Music</h6>
+                <a href="/" className="d-flex align-items-center">Amazon Music Unlimited</a>
+                <a href="/" className="d-flex align-items-center">Free Streaming Music</a>
+                <a href="/" className="d-flex align-items-center">Podcasts</a>
+                <a href="/" className="d-flex align-items-center">Open Web Player</a>
+                <a href="/" className="d-flex align-items-center">Download the app</a>
+              </div>
             </div>
           </nav>
         </div>
