@@ -114,13 +114,13 @@ const HomePage = () => {
               onClick={toggleSidebar1}>
               &times;
             </button>
-            <div className="menu-title d-flex align-items-center">
+            <a href="/" className="menu-signIn d-flex align-items-center">
               <AccountCircleIcon sx={{ fontSize: 28, color: '#ffffff', mr: 1 }} />
               Hello, sign in
-            </div>
+            </a>
             <div className="menu-info">
               <div className="menu-info-group">
-                <h6>Digital Content & Devices</h6>
+                <div className="menu-title">Digital Content & Devices</div>
                 <button
                   className="amazonMusicButton d-flex justify-content-between align-items-center"
                   onClick={toggleSidebar2}>
@@ -141,7 +141,7 @@ const HomePage = () => {
                 </button>
               </div>
               <div className="menu-info-group">
-                <h6>Shop by Department</h6>
+                <div className="menu-title">Shop by Department</div>
                 <button
                   className="amazonMusicButton d-flex justify-content-between align-items-center"
                   onClick={toggleSidebar2}>
@@ -174,7 +174,7 @@ const HomePage = () => {
                 </button>
               </div>
               <div className="menu-info-group">
-                <h6>Programs & Features</h6>
+                <div className="menu-title">Programs & Features</div>
                 <button
                   className="amazonMusicButton d-flex justify-content-between align-items-center"
                   onClick={toggleSidebar2}>
@@ -201,8 +201,8 @@ const HomePage = () => {
                   <ExpandMoreIcon sx={{ fontSize: 24, color: '#c0c0c0' }} />
                 </button>
               </div>
-              <div className="menu-info-group">
-                <h6>Help & Settings</h6>
+              <div className="menu-info-groupHS">
+                <div className="menu-title">Help & Settings</div>
                 <a href="/" className="d-flex align-items-center">Your Account</a>
                 <a href="/" className="d-flex align-items-center">
                   <LanguageIcon sx={{ fontSize: 14, color: '#c0c0c0', mr: 1 }} />
@@ -229,7 +229,7 @@ const HomePage = () => {
                 MAIN MENU
               </button>
               <div className="menu-info-group">
-                <h6>Stream Music</h6>
+                <div className="menu-title">Stream Music</div>
                 <a href="/" className="d-flex align-items-center">Amazon Music Unlimited</a>
                 <a href="/" className="d-flex align-items-center">Free Streaming Music</a>
                 <a href="/" className="d-flex align-items-center">Podcasts</a>
