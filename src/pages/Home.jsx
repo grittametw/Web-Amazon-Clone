@@ -28,7 +28,9 @@ const HomePage = () => {
     <body className={`main ${isSidebarOpen1 ? 'sidebar-open' : ''}`}>
       {isSidebarOpen1 && <div className="overlay" onClick={toggleSidebar1}></div>}
       <nav expand="lg" className="navBar navbar-dark d-flex justify-content-between align-items-center">
-        <a href="/" className="web"><img src="amazon.png" alt="amazon" className="logo" /></a>
+        <a href="/" className="web">
+          <img src="amazon.png" alt="amazon" className="logo" />
+        </a>
         <a href="#action2" className="location d-flex">
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt" viewBox="0 0 16 16">
             <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A32 32 0 0 1 8 14.58a32 32 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10" />
@@ -55,7 +57,7 @@ const HomePage = () => {
           </button>
         </div>
 
-        <a href="#action2" className="language d-flex align-items-center">
+        <a href="#action2" className="language d-flex align-items-center pt-3">
           <img src="us-flag.png" alt="us-flag" className="us-flag" />EN
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
             <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
@@ -107,139 +109,139 @@ const HomePage = () => {
           </div>
         </nav>
 
-        <div className={`list-group ${isSidebarOpen1 ? 'open' : ''}`} id="list-example">
-          <nav className="menu">
-            <button
-              className="menuCloseBtn"
-              onClick={toggleSidebar1}>
-              &times;
-            </button>
-            <a href="/" className="menu-signIn d-flex align-items-center">
-              <AccountCircleIcon sx={{ fontSize: 28, color: '#ffffff', mr: 1 }} />
-              Hello, sign in
-            </a>
-            <div className="menu-info">
-              <div className="menu-info-group">
-                <div className="menu-title">Digital Content & Devices</div>
-                <button
-                  className="amazonMusicButton d-flex justify-content-between align-items-center"
-                  onClick={toggleSidebar2}>
-                  Amazon Music
-                  <ArrowForwardIosOutlinedIcon sx={{ fontSize: 16, color: '#c0c0c0' }} />
-                </button>
-                <button
-                  className="amazonMusicButton d-flex justify-content-between align-items-center"
-                  onClick={toggleSidebar2}>
-                  Kindle E-readers & Books
-                  <ArrowForwardIosOutlinedIcon sx={{ fontSize: 16, color: '#c0c0c0' }} />
-                </button>
-                <button
-                  className="amazonMusicButton d-flex justify-content-between align-items-center"
-                  onClick={toggleSidebar2}>
-                  Amazon Appstore
-                  <ArrowForwardIosOutlinedIcon sx={{ fontSize: 16, color: '#c0c0c0' }} />
-                </button>
-              </div>
-              <div className="menu-info-group">
-                <div className="menu-title">Shop by Department</div>
-                <button
-                  className="amazonMusicButton d-flex justify-content-between align-items-center"
-                  onClick={toggleSidebar2}>
-                  Electronics
-                  <ArrowForwardIosOutlinedIcon sx={{ fontSize: 16, color: '#c0c0c0' }} />
-                </button>
-                <button
-                  className="amazonMusicButton d-flex justify-content-between align-items-center"
-                  onClick={toggleSidebar2}>
-                  Computers
-                  <ArrowForwardIosOutlinedIcon sx={{ fontSize: 16, color: '#c0c0c0' }} />
-                </button>
-                <button
-                  className="amazonMusicButton d-flex justify-content-between align-items-center"
-                  onClick={toggleSidebar2}>
-                  Smart Home
-                  <ArrowForwardIosOutlinedIcon sx={{ fontSize: 16, color: '#c0c0c0' }} />
-                </button>
-                <button
-                  className="amazonMusicButton d-flex justify-content-between align-items-center"
-                  onClick={toggleSidebar2}>
-                  Arts & Crafts
-                  <ArrowForwardIosOutlinedIcon sx={{ fontSize: 16, color: '#c0c0c0' }} />
-                </button>
-                <button
-                  className="seeAllButton d-flex align-items-center"
-                  onClick={toggleSidebar2}>
-                  See all
-                  <ExpandMoreIcon sx={{ fontSize: 24, color: '#c0c0c0' }} />
-                </button>
-              </div>
-              <div className="menu-info-group">
-                <div className="menu-title">Programs & Features</div>
-                <button
-                  className="amazonMusicButton d-flex justify-content-between align-items-center"
-                  onClick={toggleSidebar2}>
-                  Gift Cards
-                  <ArrowForwardIosOutlinedIcon sx={{ fontSize: 16, color: '#c0c0c0' }} />
-                </button>
-                <a href="/" className="d-flex align-items-center">Shop By Interest</a>
-                <button
-                  className="amazonMusicButton d-flex justify-content-between align-items-center"
-                  onClick={toggleSidebar2}>
-                  Amazon Live
-                  <ArrowForwardIosOutlinedIcon sx={{ fontSize: 16, color: '#c0c0c0' }} />
-                </button>
-                <button
-                  className="amazonMusicButton d-flex justify-content-between align-items-center"
-                  onClick={toggleSidebar2}>
-                  International Shopping
-                  <ArrowForwardIosOutlinedIcon sx={{ fontSize: 16, color: '#c0c0c0' }} />
-                </button>
-                <button
-                  className="seeAllButton d-flex align-items-center"
-                  onClick={toggleSidebar2}>
-                  See all
-                  <ExpandMoreIcon sx={{ fontSize: 24, color: '#c0c0c0' }} />
-                </button>
-              </div>
-              <div className="menu-info-groupHS">
-                <div className="menu-title">Help & Settings</div>
-                <a href="/" className="d-flex align-items-center">Your Account</a>
-                <a href="/" className="d-flex align-items-center">
-                  <LanguageIcon sx={{ fontSize: 14, color: '#c0c0c0', mr: 1 }} />
-                  English
-                </a>
-                <a href="/" className="d-flex align-items-center">
-                  <img src="us-flag.png" alt="us-flag" className="us-flag" />
-                  United States
-                </a>
-                <a href="/" className="d-flex align-items-center">Customer Service</a>
-                <a href="/" className="d-flex align-items-center">Sign in</a>
-              </div>
+        <aside className={`list-group ${isSidebarOpen1 ? 'open' : ''}`} id="list-example">
+          <button
+            className="menuCloseBtn"
+            onClick={toggleSidebar1}>
+            &times;
+          </button>
+          <a href="/" className="menu-signIn d-flex align-items-center">
+            <AccountCircleIcon sx={{ fontSize: 28, color: '#ffffff', mr: 1 }} />
+            Hello, sign in
+          </a>
+          <div className="menu-info">
+            <div className="menu-info-group">
+              <div className="menu-title">Digital Content & Devices</div>
+              <button
+                className="amazonMusicButton d-flex justify-content-between align-items-center"
+                onClick={toggleSidebar2}>
+                Amazon Music
+                <ArrowForwardIosOutlinedIcon className="arrow-icon" sx={{ fontSize: 16, color: '#c0c0c0' }} />
+              </button>
+              <button
+                className="amazonMusicButton d-flex justify-content-between align-items-center"
+                onClick={toggleSidebar2}>
+                Kindle E-readers & Books
+                <ArrowForwardIosOutlinedIcon className="arrow-icon" sx={{ fontSize: 16, color: '#c0c0c0' }} />
+              </button>
+              <button
+                className="amazonMusicButton d-flex justify-content-between align-items-center"
+                onClick={toggleSidebar2}>
+                Amazon Appstore
+                <ArrowForwardIosOutlinedIcon className="arrow-icon" sx={{ fontSize: 16, color: '#c0c0c0' }} />
+              </button>
             </div>
-          </nav>
-        </div>
+            <div className="menu-info-group">
+              <div className="menu-title">Shop by Department</div>
+              <button
+                className="amazonMusicButton d-flex justify-content-between align-items-center"
+                onClick={toggleSidebar2}>
+                Electronics
+                <ArrowForwardIosOutlinedIcon className="arrow-icon" sx={{ fontSize: 16, color: '#c0c0c0' }} />
+              </button>
+              <button
+                className="amazonMusicButton d-flex justify-content-between align-items-center"
+                onClick={toggleSidebar2}>
+                Computers
+                <ArrowForwardIosOutlinedIcon className="arrow-icon" sx={{ fontSize: 16, color: '#c0c0c0' }} />
+              </button>
+              <button
+                className="amazonMusicButton d-flex justify-content-between align-items-center"
+                onClick={toggleSidebar2}>
+                Smart Home
+                <ArrowForwardIosOutlinedIcon className="arrow-icon" sx={{ fontSize: 16, color: '#c0c0c0' }} />
+              </button>
+              <button
+                className="amazonMusicButton d-flex justify-content-between align-items-center"
+                onClick={toggleSidebar2}>
+                Arts & Crafts
+                <ArrowForwardIosOutlinedIcon className="arrow-icon" sx={{ fontSize: 16, color: '#c0c0c0' }} />
+              </button>
+              <button
+                className="seeAllButton d-flex align-items-center"
+                onClick={toggleSidebar2}>
+                See all
+                <ExpandMoreIcon className="arrow-icon" sx={{ fontSize: 24, color: '#c0c0c0' }} />
+              </button>
+            </div>
+            <div className="menu-info-group">
+              <div className="menu-title">Programs & Features</div>
+              <button
+                className="amazonMusicButton d-flex justify-content-between align-items-center"
+                onClick={toggleSidebar2}>
+                Gift Cards
+                <ArrowForwardIosOutlinedIcon className="arrow-icon" sx={{ fontSize: 16, color: '#c0c0c0' }} />
+              </button>
+              <a href="/" className="d-flex align-items-center">Shop By Interest</a>
+              <button
+                className="amazonMusicButton d-flex justify-content-between align-items-center"
+                onClick={toggleSidebar2}>
+                Amazon Live
+                <ArrowForwardIosOutlinedIcon className="arrow-icon" sx={{ fontSize: 16, color: '#c0c0c0' }} />
+              </button>
+              <button
+                className="amazonMusicButton d-flex justify-content-between align-items-center"
+                onClick={toggleSidebar2}>
+                International Shopping
+                <ArrowForwardIosOutlinedIcon className="arrow-icon" sx={{ fontSize: 16, color: '#c0c0c0' }} />
+              </button>
+              <button
+                className="seeAllButton d-flex align-items-center"
+                onClick={toggleSidebar2}>
+                See all
+                <ExpandMoreIcon className="arrow-icon" sx={{ fontSize: 24, color: '#c0c0c0' }} />
+              </button>
+            </div>
+            <div className="menu-info-groupHS">
+              <div className="menu-title">Help & Settings</div>
+              <a href="/" className="d-flex align-items-center">Your Account</a>
+              <a href="/" className="d-flex align-items-center">
+                <LanguageIcon sx={{ fontSize: 14, color: '#c0c0c0', mr: 1 }} />
+                English
+              </a>
+              <a href="/" className="d-flex align-items-center">
+                <img src="us-flag.png" alt="us-flag" className="us-flag" />
+                United States
+              </a>
+              <a href="/" className="d-flex align-items-center">Customer Service</a>
+              <a href="/" className="d-flex align-items-center">Sign in</a>
+            </div>
+          </div>
+        </aside>
 
         <div className={`asd ${isSidebarOpen2 ? 'open' : ''}`} id="list-example">
-          <nav className="menu">
-            <div className="menu-info">
-              <button
-                className="amazonMusicButton d-flex align-items-center"
-                onClick={toggleSidebar2}>
-                <ArrowBackIcon sx={{ fontSize: 20, color: '#c0c0c0', mr: 1 }} />
-                MAIN MENU
-              </button>
-              <div className="menu-info-group">
-                <div className="menu-title">Stream Music</div>
-                <a href="/" className="d-flex align-items-center">Amazon Music Unlimited</a>
-                <a href="/" className="d-flex align-items-center">Free Streaming Music</a>
-                <a href="/" className="d-flex align-items-center">Podcasts</a>
-                <a href="/" className="d-flex align-items-center">Open Web Player</a>
-                <a href="/" className="d-flex align-items-center">Download the app</a>
-              </div>
+          <div className="menu-info">
+            <button
+              className="amazonMusicButton d-flex align-items-center"
+              onClick={toggleSidebar2}>
+              <ArrowBackIcon className="arrow-icon" sx={{ fontSize: 20, color: '#c0c0c0', mr: 1 }} />
+              MAIN MENU
+            </button>
+            <div className="menu-info-group">
+              <div className="menu-title">Stream Music</div>
+              <a href="/" className="d-flex align-items-center">Amazon Music Unlimited</a>
+              <a href="/" className="d-flex align-items-center">Free Streaming Music</a>
+              <a href="/" className="d-flex align-items-center">Podcasts</a>
+              <a href="/" className="d-flex align-items-center">Open Web Player</a>
+              <a href="/" className="d-flex align-items-center">Download the app</a>
             </div>
-          </nav>
+          </div>
         </div>
       </div>
+
+      <main className="main d-flex justify-content-center">
+        <img src="background.jpg" alt="background" className="background" />
+      </main>
     </body>
   );
 }
