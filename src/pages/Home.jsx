@@ -4,6 +4,9 @@ import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import LanguageIcon from '@mui/icons-material/Language';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+import Box from '@mui/material/Box';
+import Grid from '@mui/material/Grid2';
+import Paper from '@mui/material/Paper';
 import DropdownMenu from '../components/DropdownMenu'
 import '../css/Home.css'
 
@@ -31,7 +34,7 @@ const HomePage = () => {
         <a href="/" className="web">
           <img src="amazon.png" alt="amazon" className="logo" />
         </a>
-        <a href="#action2" className="location d-flex">
+        <a href="#action2" className="location d-flex align-items-end">
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt" viewBox="0 0 16 16">
             <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A32 32 0 0 1 8 14.58a32 32 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10" />
             <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4m0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6" />
@@ -79,17 +82,21 @@ const HomePage = () => {
         </div>
         <a href="#action1" className="returnOrders">Returns <p>& Orders</p></a>
         <a href="/cart" className="cartButton d-flex align-items-end">
-          <img src="cart.svg" alt="cart" className="cart" />Cart
+          <div className="cartAmount d-flex flex-column align-items-center ">
+            0
+            <img src="cart.svg" alt="cart" className="cart" />
+          </div>
+          Cart
         </a>
       </nav>
 
       <div className="B">
         <nav className="navBarB navbar-dark d-flex align-items-center">
+
           <button className="navbar-toggler d-flex align-items-center" onClick={toggleSidebar1}>
             <span className="navbar-toggler-icon"></span>
             All
           </button>
-
           <div className="nav-xshop d-flex align-items-center">
             <a href="/" className="navbar-b">
               Today's Deals
@@ -241,6 +248,43 @@ const HomePage = () => {
 
       <main className="main d-flex justify-content-center">
         <img src="background.jpg" alt="background" className="background" />
+        <Box className="boxxx">
+          <Grid
+            container
+            direction="column"
+            spacing={2}>
+            <Grid container spacing={2}>
+              <Paper
+                className="paper d-flex flex-column"
+                sx={{ backgroundColor: '#000', padding: 2, color: '#fff', borderRadius: '0' }}>
+                Small gifts under $20
+                <img src="shop-1.jpg" alt="shop-1" className="shop-1" />
+                Shop now
+              </Paper>
+              <Paper
+                className="paper d-flex flex-column"
+                sx={{ backgroundColor: '#000', padding: 2, color: '#fff', borderRadius: '0' }}>
+                Small gifts under $20
+                <img src="shop-2.jpg" alt="shop-2" className="shop-2" />
+                Shop now
+              </Paper>
+              <Paper
+                className="paper d-flex flex-column"
+                sx={{ backgroundColor: '#000', padding: 2, color: '#fff', borderRadius: '0' }}>
+                Small gifts under $20
+                <img src="shop-3.jpg" alt="shop-3" className="shop-3" />
+                Shop now
+              </Paper>
+              <Paper sx={{ backgroundColor: '#000', padding: 22 }}></Paper>
+            </Grid>
+            <Grid container spacing={2}>
+              <Paper sx={{ backgroundColor: '#000', padding: 22 }}></Paper>
+              <Paper sx={{ backgroundColor: '#000', padding: 22 }}></Paper>
+              <Paper sx={{ backgroundColor: '#000', padding: 22 }}></Paper>
+              <Paper sx={{ backgroundColor: '#000', padding: 22 }}></Paper>
+            </Grid>
+          </Grid>
+        </Box>
       </main>
     </body>
   );
