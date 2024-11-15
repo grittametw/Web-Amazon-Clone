@@ -1,0 +1,24 @@
+version: '3.1'
+
+services:
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: test_phpmyadmin
+    restart: always
+    environment:
+      PMA_PASSWORD: gw_root
+      PMA_USER: root
+      PMA_HOSTS: mysql
+    ports:
+      - 8000:80
+
+  mysql:
+    image: mysql:5.7
+    container_name: test_db
+    volumes:
+      - "./data:/var/lib/mysql"
+    environment:
+      MYSQL_ROOT_PASSWORD: gw_root
+      MYSQL_DATABASE: gw
+    ports:
+      - 3308:3306

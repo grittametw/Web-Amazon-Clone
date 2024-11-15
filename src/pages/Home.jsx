@@ -252,8 +252,8 @@ const HomePage = () => {
           <Grid
             container
             direction="column"
-            spacing={2}>
-            <Grid container spacing={2}>
+            spacing={2.5}>
+            <Grid container spacing={2.5}>
               <Paper
                 className="paper d-flex flex-column"
                 sx={{ backgroundColor: '#000', padding: 2, color: '#fff', borderRadius: '0' }}>
@@ -264,24 +264,103 @@ const HomePage = () => {
               <Paper
                 className="paper d-flex flex-column"
                 sx={{ backgroundColor: '#000', padding: 2, color: '#fff', borderRadius: '0' }}>
-                Small gifts under $20
+                FREE Shipping to Thailand
                 <img src="shop-2.jpg" alt="shop-2" className="shop-2" />
+                Learn more
+              </Paper>
+              <Paper
+                className="paper d-flex flex-column"
+                sx={{ backgroundColor: '#000', padding: 2, color: '#fff', borderRadius: '0' }}>
+                Get your game on
+                <img src="shop-3.jpg" alt="shop-3" className="shop-3" />
+                Shop gaming
+              </Paper>
+              <Paper
+                className="paper d-flex flex-column"
+                sx={{ backgroundColor: '#000', padding: 2, color: '#fff', borderRadius: '0' }}>
+                Shop for your home essentials
+                <Grid
+                  container
+                  direction="column"
+                  spacing={4}>
+                  <Grid container spacing={2}>
+                    <a href="/" className="d-flex flex-column">
+                      <img src="shop-4-1.jpg" alt="shop-4-1" className="shop-4-1" />
+                      Cleaning Tools
+                    </a>
+                    <a href="/" className="d-flex flex-column">
+                      <img src="shop-4-2.jpg" alt="shop-4-2" className="shop-4-2" />
+                      Cleaning Tools
+                    </a>
+                  </Grid>
+                  <Grid container spacing={2}>
+                    <a href="/" className="d-flex flex-column">
+                      <img src="shop-4-3.jpg" alt="shop-4-3" className="shop-4-3" />
+                      Cleaning Tools
+                    </a>
+                    <a href="/" className="d-flex flex-column">
+                      <img src="shop-4-4.jpg" alt="shop-4-4" className="shop-4-4" />
+                      Cleaning Tools
+                    </a>
+                  </Grid>
+                </Grid>
+                Discover more in Home
+              </Paper>
+            </Grid>
+
+            <Grid container spacing={2.5}>
+              <Paper
+                className="paper d-flex flex-column"
+                sx={{ backgroundColor: '#000', padding: 2, color: '#fff', borderRadius: '0' }}>
+                Small gifts under $20
+                <img src="shop-1.jpg" alt="shop-1" className="shop-1" />
                 Shop now
               </Paper>
               <Paper
                 className="paper d-flex flex-column"
                 sx={{ backgroundColor: '#000', padding: 2, color: '#fff', borderRadius: '0' }}>
-                Small gifts under $20
-                <img src="shop-3.jpg" alt="shop-3" className="shop-3" />
-                Shop now
+                FREE Shipping to Thailand
+                <img src="shop-2.jpg" alt="shop-2" className="shop-2" />
+                Learn more
               </Paper>
-              <Paper sx={{ backgroundColor: '#000', padding: 22 }}></Paper>
-            </Grid>
-            <Grid container spacing={2}>
-              <Paper sx={{ backgroundColor: '#000', padding: 22 }}></Paper>
-              <Paper sx={{ backgroundColor: '#000', padding: 22 }}></Paper>
-              <Paper sx={{ backgroundColor: '#000', padding: 22 }}></Paper>
-              <Paper sx={{ backgroundColor: '#000', padding: 22 }}></Paper>
+              <Paper
+                className="paper d-flex flex-column"
+                sx={{ backgroundColor: '#000', padding: 2, color: '#fff', borderRadius: '0' }}>
+                Get your game on
+                <img src="shop-3.jpg" alt="shop-3" className="shop-3" />
+                Shop gaming
+              </Paper>
+              <Paper
+                className="paper d-flex flex-column"
+                sx={{ backgroundColor: '#000', padding: 2, color: '#fff', borderRadius: '0' }}>
+                Shop for your home essentials
+                <Grid
+                  container
+                  direction="column"
+                  spacing={4}>
+                  <Grid container spacing={2}>
+                    <a href="/" className="d-flex flex-column">
+                      <img src="shop-4-1.jpg" alt="shop-4-1" className="shop-4-1" />
+                      Cleaning Tools
+                    </a>
+                    <a href="/" className="d-flex flex-column">
+                      <img src="shop-4-2.jpg" alt="shop-4-2" className="shop-4-2" />
+                      Cleaning Tools
+                    </a>
+                  </Grid>
+                  <Grid container spacing={2}>
+                    <a href="/" className="d-flex flex-column">
+                      <img src="shop-4-3.jpg" alt="shop-4-3" className="shop-4-3" />
+                      Cleaning Tools
+                    </a>
+                    <a href="/" className="d-flex flex-column">
+                      <img src="shop-4-4.jpg" alt="shop-4-4" className="shop-4-4" />
+                      Cleaning Tools
+                    </a>
+                  </Grid>
+                </Grid>
+                Discover more in Home
+              </Paper>
             </Grid>
           </Grid>
         </Box>

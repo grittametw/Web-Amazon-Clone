@@ -81,7 +81,8 @@ body {
     width: 365px;
 }
 
-a {
+.navBar a,
+.navBarB a {
     font-size: 12px;
     text-decoration: none;
     background-color: transparent;
@@ -154,7 +155,7 @@ p {
 }
 
 .web {
-    padding: 12px 8px 4px 8px;
+    padding: 8px 8px 4px 8px;
 }
 
 .location {
@@ -229,6 +230,22 @@ p {
     width: 310px;
     margin-top: 12px;
     margin-bottom: 12px;
+}
+
+.shop-4-1 {
+    width: 147px;
+}
+
+.shop-4-2 {
+    width: 147px;
+}
+
+.shop-4-3 {
+    width: 147px;
+}
+
+.shop-4-4 {
+    width: 147px;
 }
 
 .searchBar {
