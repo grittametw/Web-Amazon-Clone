@@ -6,6 +6,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: "Geist", sans-serif;
+    background-color: #e3e6e6;
 }
 
 .overlay {
@@ -40,7 +41,7 @@ body {
     left: 0;
     overflow: hidden;
     transition: 0.3s;
-    z-index: 1; 
+    z-index: 1;
     background-color: #ffffff;
     border-radius: 0;
 }
@@ -94,27 +95,15 @@ body {
 
 .menu-info a {
     width: 100%;
-    font-size: 13px;
-    font-weight: 600;
+    font-size: 12px;
+    font-weight: 500;
+    text-decoration: none;
     border: none;
     color: #000000;
-    background-color: #ffffff;
     padding: 12px 16px 12px 34px;
 }
 
 .menu-info a:hover {
-    background-color: #c0c0c0;
-}
-
-.asd a {
-    width: 100%;
-    font-size: 12px;
-    border: none;
-    color: #000000;
-    padding: 12px 16px 12px 32px;
-}
-
-.asd a:hover {
     background-color: #c0c0c0;
 }
 
@@ -205,6 +194,10 @@ p {
     margin-right: 4px;
 }
 
+.navbar-toggler-icon {
+    margin-right: 2px;
+}
+
 .background {
     width: 1500px;
 }
@@ -290,8 +283,9 @@ p {
 
 .navBarB button {
     border: none;
-    font-size: 12px;
-    padding: 10px 8px;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 8px;
     color: #ffffff;
 }
 
@@ -339,6 +333,7 @@ p {
 .menu-signIn {
     font-size: 18px;
     font-weight: 600;
+    text-decoration: none;
     color: #ffffff;
     background-color: #232f3e;
     padding: 12px 0 12px 34px;
@@ -363,3 +358,6 @@ p {
     margin: 0;
 }
 
+.paper h5 {
+    font-weight: 700;
+}

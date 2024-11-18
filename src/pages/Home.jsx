@@ -92,7 +92,6 @@ const HomePage = () => {
 
       <div className="B">
         <nav className="navBarB navbar-dark d-flex align-items-center">
-
           <button className="navbar-toggler d-flex align-items-center" onClick={toggleSidebar1}>
             <span className="navbar-toggler-icon"></span>
             All
@@ -256,29 +255,35 @@ const HomePage = () => {
             <Grid container spacing={2.5}>
               <Paper
                 className="paper d-flex flex-column"
-                sx={{ backgroundColor: '#000', padding: 2, color: '#fff', borderRadius: '0' }}>
-                Small gifts under $20
-                <img src="shop-1.jpg" alt="shop-1" className="shop-1" />
-                Shop now
+                sx={{ backgroundColor: '#fff', padding: 2.5, color: '#000', borderRadius: '0' }}>
+                <h5>Small gifts under $20</h5>
+                <a href="/" className="shop-single d-flex flex-column">
+                  <img src="shop-1.jpg" alt="shop-1" className="shop-1" />
+                  Shop now
+                </a>
               </Paper>
               <Paper
                 className="paper d-flex flex-column"
-                sx={{ backgroundColor: '#000', padding: 2, color: '#fff', borderRadius: '0' }}>
-                FREE Shipping to Thailand
-                <img src="shop-2.jpg" alt="shop-2" className="shop-2" />
-                Learn more
+                sx={{ backgroundColor: '#fff', padding: 2.5, color: '#000', borderRadius: '0' }}>
+                <h5>FREE Shipping to Thailand</h5>
+                <a href="/" className="shop-single d-flex flex-column">
+                  <img src="shop-2.jpg" alt="shop-2" className="shop-2" />
+                  Learn more
+                </a>
               </Paper>
               <Paper
                 className="paper d-flex flex-column"
-                sx={{ backgroundColor: '#000', padding: 2, color: '#fff', borderRadius: '0' }}>
-                Get your game on
-                <img src="shop-3.jpg" alt="shop-3" className="shop-3" />
-                Shop gaming
+                sx={{ backgroundColor: '#fff', padding: 2.5, color: '#000', borderRadius: '0' }}>
+                <h5>Deals in PCs</h5>
+                <a href="/" className="shop-single d-flex flex-column">
+                  <img src="shop-3.jpg" alt="shop-3" className="shop-3" />
+                  Shop now
+                </a>
               </Paper>
               <Paper
                 className="paper d-flex flex-column"
-                sx={{ backgroundColor: '#000', padding: 2, color: '#fff', borderRadius: '0' }}>
-                Shop for your home essentials
+                sx={{ backgroundColor: '#fff', padding: 2.5, color: '#000', borderRadius: '0' }}>
+                <h5>Shop for your home essentials</h5>
                 <Grid
                   container
                   direction="column"
@@ -304,35 +309,41 @@ const HomePage = () => {
                     </a>
                   </Grid>
                 </Grid>
-                Discover more in Home
+                <a href="/">Discover more in Home</a>
               </Paper>
             </Grid>
 
             <Grid container spacing={2.5}>
               <Paper
                 className="paper d-flex flex-column"
-                sx={{ backgroundColor: '#000', padding: 2, color: '#fff', borderRadius: '0' }}>
+                sx={{ backgroundColor: '#fff', padding: 2.5, color: '#000', borderRadius: '0' }}>
                 Small gifts under $20
-                <img src="shop-1.jpg" alt="shop-1" className="shop-1" />
-                Shop now
+                <a href="/" className="shop-single d-flex flex-column">
+                  <img src="shop-1.jpg" alt="shop-1" className="shop-1" />
+                  Shop now
+                </a>
               </Paper>
               <Paper
                 className="paper d-flex flex-column"
-                sx={{ backgroundColor: '#000', padding: 2, color: '#fff', borderRadius: '0' }}>
+                sx={{ backgroundColor: '#fff', padding: 2.5, color: '#000', borderRadius: '0' }}>
                 FREE Shipping to Thailand
-                <img src="shop-2.jpg" alt="shop-2" className="shop-2" />
-                Learn more
+                <a href="/" className="shop-single d-flex flex-column">
+                  <img src="shop-2.jpg" alt="shop-2" className="shop-2" />
+                  Learn more
+                </a>
               </Paper>
               <Paper
                 className="paper d-flex flex-column"
-                sx={{ backgroundColor: '#000', padding: 2, color: '#fff', borderRadius: '0' }}>
+                sx={{ backgroundColor: '#fff', padding: 2.5, color: '#000', borderRadius: '0' }}>
                 Get your game on
-                <img src="shop-3.jpg" alt="shop-3" className="shop-3" />
-                Shop gaming
+                <a href="/" className="shop-single d-flex flex-column">
+                  <img src="shop-3.jpg" alt="shop-3" className="shop-3" />
+                  Shop gaming
+                </a>
               </Paper>
               <Paper
                 className="paper d-flex flex-column"
-                sx={{ backgroundColor: '#000', padding: 2, color: '#fff', borderRadius: '0' }}>
+                sx={{ backgroundColor: '#fff', padding: 2.5, color: '#000', borderRadius: '0' }}>
                 Shop for your home essentials
                 <Grid
                   container
@@ -359,7 +370,7 @@ const HomePage = () => {
                     </a>
                   </Grid>
                 </Grid>
-                Discover more in Home
+                <a href="/">Discover more in Home</a>
               </Paper>
             </Grid>
           </Grid>
