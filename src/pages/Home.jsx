@@ -1,5 +1,6 @@
 import { useState } from 'react'
-import ArrowForwardIosOutlinedIcon from '@mui/icons-material/ArrowForwardIosOutlined';
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import LanguageIcon from '@mui/icons-material/Language';
@@ -132,19 +133,19 @@ const HomePage = () => {
                 className="amazonMusicButton d-flex justify-content-between align-items-center"
                 onClick={toggleSidebar2}>
                 Amazon Music
-                <ArrowForwardIosOutlinedIcon className="arrow-icon" sx={{ fontSize: 16, color: '#c0c0c0' }} />
+                <ArrowForwardIosIcon className="arrow-icon" sx={{ fontSize: 16, color: '#c0c0c0' }} />
               </button>
               <button
                 className="amazonMusicButton d-flex justify-content-between align-items-center"
                 onClick={toggleSidebar2}>
                 Kindle E-readers & Books
-                <ArrowForwardIosOutlinedIcon className="arrow-icon" sx={{ fontSize: 16, color: '#c0c0c0' }} />
+                <ArrowForwardIosIcon className="arrow-icon" sx={{ fontSize: 16, color: '#c0c0c0' }} />
               </button>
               <button
                 className="amazonMusicButton d-flex justify-content-between align-items-center"
                 onClick={toggleSidebar2}>
                 Amazon Appstore
-                <ArrowForwardIosOutlinedIcon className="arrow-icon" sx={{ fontSize: 16, color: '#c0c0c0' }} />
+                <ArrowForwardIosIcon className="arrow-icon" sx={{ fontSize: 16, color: '#c0c0c0' }} />
               </button>
             </div>
             <div className="menu-info-group">
@@ -153,25 +154,25 @@ const HomePage = () => {
                 className="amazonMusicButton d-flex justify-content-between align-items-center"
                 onClick={toggleSidebar2}>
                 Electronics
-                <ArrowForwardIosOutlinedIcon className="arrow-icon" sx={{ fontSize: 16, color: '#c0c0c0' }} />
+                <ArrowForwardIosIcon className="arrow-icon" sx={{ fontSize: 16, color: '#c0c0c0' }} />
               </button>
               <button
                 className="amazonMusicButton d-flex justify-content-between align-items-center"
                 onClick={toggleSidebar2}>
                 Computers
-                <ArrowForwardIosOutlinedIcon className="arrow-icon" sx={{ fontSize: 16, color: '#c0c0c0' }} />
+                <ArrowForwardIosIcon className="arrow-icon" sx={{ fontSize: 16, color: '#c0c0c0' }} />
               </button>
               <button
                 className="amazonMusicButton d-flex justify-content-between align-items-center"
                 onClick={toggleSidebar2}>
                 Smart Home
-                <ArrowForwardIosOutlinedIcon className="arrow-icon" sx={{ fontSize: 16, color: '#c0c0c0' }} />
+                <ArrowForwardIosIcon className="arrow-icon" sx={{ fontSize: 16, color: '#c0c0c0' }} />
               </button>
               <button
                 className="amazonMusicButton d-flex justify-content-between align-items-center"
                 onClick={toggleSidebar2}>
                 Arts & Crafts
-                <ArrowForwardIosOutlinedIcon className="arrow-icon" sx={{ fontSize: 16, color: '#c0c0c0' }} />
+                <ArrowForwardIosIcon className="arrow-icon" sx={{ fontSize: 16, color: '#c0c0c0' }} />
               </button>
               <button
                 className="seeAllButton d-flex align-items-center"
@@ -186,20 +187,20 @@ const HomePage = () => {
                 className="amazonMusicButton d-flex justify-content-between align-items-center"
                 onClick={toggleSidebar2}>
                 Gift Cards
-                <ArrowForwardIosOutlinedIcon className="arrow-icon" sx={{ fontSize: 16, color: '#c0c0c0' }} />
+                <ArrowForwardIosIcon className="arrow-icon" sx={{ fontSize: 16, color: '#c0c0c0' }} />
               </button>
               <a href="/" className="d-flex align-items-center">Shop By Interest</a>
               <button
                 className="amazonMusicButton d-flex justify-content-between align-items-center"
                 onClick={toggleSidebar2}>
                 Amazon Live
-                <ArrowForwardIosOutlinedIcon className="arrow-icon" sx={{ fontSize: 16, color: '#c0c0c0' }} />
+                <ArrowForwardIosIcon className="arrow-icon" sx={{ fontSize: 16, color: '#c0c0c0' }} />
               </button>
               <button
                 className="amazonMusicButton d-flex justify-content-between align-items-center"
                 onClick={toggleSidebar2}>
                 International Shopping
-                <ArrowForwardIosOutlinedIcon className="arrow-icon" sx={{ fontSize: 16, color: '#c0c0c0' }} />
+                <ArrowForwardIosIcon className="arrow-icon" sx={{ fontSize: 16, color: '#c0c0c0' }} />
               </button>
               <button
                 className="seeAllButton d-flex align-items-center"
@@ -225,7 +226,7 @@ const HomePage = () => {
           </div>
         </aside>
 
-        <div className={`asd ${isSidebarOpen2 ? 'open' : ''}`} id="list-example">
+        <div className={`list-group-info ${isSidebarOpen2 ? 'open' : ''}`} id="list-example">
           <div className="menu-info">
             <button
               className="amazonMusicButton d-flex align-items-center"
@@ -245,8 +246,16 @@ const HomePage = () => {
         </div>
       </div>
 
-      <main className="main d-flex justify-content-center">
-        <img src="background.jpg" alt="background" className="background" />
+      <main className="d-flex justify-content-center">
+      <img src="background.jpg" alt="background" className="background" />
+        <div className="boxButton d-flex justify-content-between">
+          <button className="changeBGLButton">
+            <ArrowBackIosNewIcon className="arrow-icon" sx={{ fontSize: 48 }}/>
+          </button>
+          <button className="changeBGRButton">
+            <ArrowForwardIosIcon className="arrow-icon" sx={{ fontSize: 48 }}/>
+          </button>
+        </div>
         <Box className="boxxx">
           <Grid
             container
@@ -257,7 +266,7 @@ const HomePage = () => {
                 className="paper d-flex flex-column"
                 sx={{ backgroundColor: '#fff', padding: 2.5, color: '#000', borderRadius: '0' }}>
                 <h5>Small gifts under $20</h5>
-                <a href="/" className="shop-single d-flex flex-column">
+                <a href="/" className="shop-paragraph d-flex flex-column">
                   <img src="shop-1.jpg" alt="shop-1" className="shop-1" />
                   Shop now
                 </a>
@@ -266,7 +275,7 @@ const HomePage = () => {
                 className="paper d-flex flex-column"
                 sx={{ backgroundColor: '#fff', padding: 2.5, color: '#000', borderRadius: '0' }}>
                 <h5>FREE Shipping to Thailand</h5>
-                <a href="/" className="shop-single d-flex flex-column">
+                <a href="/" className="shop-paragraph d-flex flex-column">
                   <img src="shop-2.jpg" alt="shop-2" className="shop-2" />
                   Learn more
                 </a>
@@ -275,7 +284,7 @@ const HomePage = () => {
                 className="paper d-flex flex-column"
                 sx={{ backgroundColor: '#fff', padding: 2.5, color: '#000', borderRadius: '0' }}>
                 <h5>Deals in PCs</h5>
-                <a href="/" className="shop-single d-flex flex-column">
+                <a href="/" className="shop-paragraph d-flex flex-column">
                   <img src="shop-3.jpg" alt="shop-3" className="shop-3" />
                   Shop now
                 </a>
@@ -287,29 +296,30 @@ const HomePage = () => {
                 <Grid
                   container
                   direction="column"
-                  spacing={4}>
+                  spacing={3}
+                  className="menuGroup">
                   <Grid container spacing={2}>
-                    <a href="/" className="d-flex flex-column">
+                    <a href="/" className="shopGroup-paragraph d-flex flex-column">
                       <img src="shop-4-1.jpg" alt="shop-4-1" className="shop-4-1" />
                       Cleaning Tools
                     </a>
-                    <a href="/" className="d-flex flex-column">
+                    <a href="/" className="shopGroup-paragraph d-flex flex-column">
                       <img src="shop-4-2.jpg" alt="shop-4-2" className="shop-4-2" />
-                      Cleaning Tools
+                      Home Storage
                     </a>
                   </Grid>
                   <Grid container spacing={2}>
-                    <a href="/" className="d-flex flex-column">
+                    <a href="/" className="shopGroup-paragraph d-flex flex-column">
                       <img src="shop-4-3.jpg" alt="shop-4-3" className="shop-4-3" />
-                      Cleaning Tools
+                      Home Decor
                     </a>
-                    <a href="/" className="d-flex flex-column">
+                    <a href="/" className="shopGroup-paragraph d-flex flex-column">
                       <img src="shop-4-4.jpg" alt="shop-4-4" className="shop-4-4" />
-                      Cleaning Tools
+                      Bedding
                     </a>
                   </Grid>
                 </Grid>
-                <a href="/">Discover more in Home</a>
+                <a href="/" className="shop-paragraph">Discover more in Home</a>
               </Paper>
             </Grid>
 
@@ -317,8 +327,8 @@ const HomePage = () => {
               <Paper
                 className="paper d-flex flex-column"
                 sx={{ backgroundColor: '#fff', padding: 2.5, color: '#000', borderRadius: '0' }}>
-                Small gifts under $20
-                <a href="/" className="shop-single d-flex flex-column">
+                <h5>Small gifts under $20</h5>
+                <a href="/" className="shop-paragraph d-flex flex-column">
                   <img src="shop-1.jpg" alt="shop-1" className="shop-1" />
                   Shop now
                 </a>
@@ -326,8 +336,8 @@ const HomePage = () => {
               <Paper
                 className="paper d-flex flex-column"
                 sx={{ backgroundColor: '#fff', padding: 2.5, color: '#000', borderRadius: '0' }}>
-                FREE Shipping to Thailand
-                <a href="/" className="shop-single d-flex flex-column">
+                <h5>FREE Shipping to Thailand</h5>
+                <a href="/" className="shop-paragraph d-flex flex-column">
                   <img src="shop-2.jpg" alt="shop-2" className="shop-2" />
                   Learn more
                 </a>
@@ -335,8 +345,8 @@ const HomePage = () => {
               <Paper
                 className="paper d-flex flex-column"
                 sx={{ backgroundColor: '#fff', padding: 2.5, color: '#000', borderRadius: '0' }}>
-                Get your game on
-                <a href="/" className="shop-single d-flex flex-column">
+                <h5>Get your game on</h5>
+                <a href="/" className="shop-paragraph d-flex flex-column">
                   <img src="shop-3.jpg" alt="shop-3" className="shop-3" />
                   Shop gaming
                 </a>
@@ -344,33 +354,34 @@ const HomePage = () => {
               <Paper
                 className="paper d-flex flex-column"
                 sx={{ backgroundColor: '#fff', padding: 2.5, color: '#000', borderRadius: '0' }}>
-                Shop for your home essentials
+                <h5>Shop for your home essentials</h5>
                 <Grid
                   container
                   direction="column"
-                  spacing={4}>
+                  spacing={3}
+                  className="menuGroup">
                   <Grid container spacing={2}>
-                    <a href="/" className="d-flex flex-column">
+                    <a href="/" className="shopGroup-paragraph d-flex flex-column">
                       <img src="shop-4-1.jpg" alt="shop-4-1" className="shop-4-1" />
                       Cleaning Tools
                     </a>
-                    <a href="/" className="d-flex flex-column">
+                    <a href="/" className="shopGroup-paragraph d-flex flex-column">
                       <img src="shop-4-2.jpg" alt="shop-4-2" className="shop-4-2" />
                       Cleaning Tools
                     </a>
                   </Grid>
                   <Grid container spacing={2}>
-                    <a href="/" className="d-flex flex-column">
+                    <a href="/" className="shopGroup-paragraph d-flex flex-column">
                       <img src="shop-4-3.jpg" alt="shop-4-3" className="shop-4-3" />
                       Cleaning Tools
                     </a>
-                    <a href="/" className="d-flex flex-column">
+                    <a href="/" className="shopGroup-paragraph d-flex flex-column">
                       <img src="shop-4-4.jpg" alt="shop-4-4" className="shop-4-4" />
                       Cleaning Tools
                     </a>
                   </Grid>
                 </Grid>
-                <a href="/">Discover more in Home</a>
+                <a href="/" className="shop-paragraph">Discover more in Home</a>
               </Paper>
             </Grid>
           </Grid>

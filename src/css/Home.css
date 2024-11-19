@@ -66,7 +66,7 @@ body {
     border: none;
 }
 
-.asd {
+.list-group-info {
     width: 0;
     height: 100%;
     position: fixed;
@@ -78,7 +78,7 @@ body {
     background-color: #ffffff;
 }
 
-.asd.open {
+.list-group-info.open {
     width: 365px;
 }
 
@@ -101,10 +101,24 @@ body {
     border: none;
     color: #000000;
     padding: 12px 16px 12px 34px;
+    &:hover {
+        background-color: #c0c0c0;
+    }
 }
 
-.menu-info a:hover {
-    background-color: #c0c0c0;
+.shop-paragraph {
+    font-size: 14px;
+    text-decoration: none;
+    color: #057487;
+    &:hover {
+        color: #c7511f;
+    }
+}
+
+.shopGroup-paragraph {
+    font-size: 12px;
+    text-decoration: none;
+    color: #000000;
 }
 
 p {
@@ -207,36 +221,17 @@ p {
     top: 350px;
 }
 
-.shop-1 {
-    width: 310px;
-    margin-top: 12px;
-    margin-bottom: 12px;
-}
-
-.shop-2 {
-    width: 310px;
-    margin-top: 12px;
-    margin-bottom: 12px;
-}
-
+.shop-1,
+.shop-2,
 .shop-3 {
     width: 310px;
     margin-top: 12px;
     margin-bottom: 12px;
 }
 
-.shop-4-1 {
-    width: 147px;
-}
-
-.shop-4-2 {
-    width: 147px;
-}
-
-.shop-4-3 {
-    width: 147px;
-}
-
+.shop-4-1,
+.shop-4-2,
+.shop-4-3,
 .shop-4-4 {
     width: 147px;
 }
@@ -358,6 +353,24 @@ p {
     margin: 0;
 }
 
+.boxButton {
+    width: 1500px;
+    height: 254px;
+    position: absolute;
+}
+
+main .changeBGLButton,
+main .changeBGRButton {
+    width: 80px;
+    background-color: transparent;
+    border: none;
+}
+
 .paper h5 {
     font-weight: 700;
+}
+
+.menuGroup {
+    margin-top: 12px;
+    margin-bottom: 16px;
 }
