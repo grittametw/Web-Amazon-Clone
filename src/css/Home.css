@@ -216,11 +216,6 @@ p {
     width: 1500px;
 }
 
-.boxxx {
-    position: absolute;
-    top: 350px;
-}
-
 .shop-1,
 .shop-2,
 .shop-3 {
@@ -353,6 +348,11 @@ p {
     margin: 0;
 }
 
+.boxxx {
+    position: absolute;
+    top: 350px;
+}
+
 .boxButton {
     width: 1500px;
     height: 254px;
@@ -373,4 +373,9 @@ main .changeBGRButton {
 .menuGroup {
     margin-top: 12px;
     margin-bottom: 16px;
+}
+
+.relatedItems {
+    width: 1434px;
+    overflow-x: scroll;
 }
