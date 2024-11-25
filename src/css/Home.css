@@ -115,6 +115,17 @@ body {
     }
 }
 
+.shop-paragraph-h {
+    font-size: 14px;
+    text-decoration: none;
+    margin-left: 16px;
+    color: #057487;
+    &:hover {
+        color: #c7511f;
+        text-decoration: underline
+    }
+}
+
 .shopGroup-paragraph {
     font-size: 12px;
     text-decoration: none;
@@ -216,19 +227,16 @@ p {
     width: 1500px;
 }
 
-.shop-1,
-.shop-2,
-.shop-3 {
+.shopItemsSingle {
     width: 310px;
-    margin-top: 12px;
-    margin-bottom: 12px;
+    height: 300px;
+    margin-top: 4px;
+    margin-bottom: 20px;
 }
 
-.shop-4-1,
-.shop-4-2,
-.shop-4-3,
-.shop-4-4 {
+.shopItemsGroup {
     width: 147px;
+    height: 120px;
 }
 
 .searchBar {
@@ -371,8 +379,8 @@ main .changeBGRButton {
 }
 
 .menuGroup {
-    margin-top: 12px;
-    margin-bottom: 16px;
+    margin-top: 4px;
+    margin-bottom: 20px;
 }
 
 .relatedItems {

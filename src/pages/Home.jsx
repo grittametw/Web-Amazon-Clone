@@ -256,6 +256,7 @@ const HomePage = () => {
             <ArrowForwardIosIcon className="arrow-icon" sx={{ fontSize: 48 }} />
           </button>
         </div>
+
         <Box className="boxxx">
           <Grid
             container
@@ -269,8 +270,8 @@ const HomePage = () => {
                 <a href="/" className="shop-paragraph d-flex flex-column">
                   <img
                     src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Events/2023/EBF23/Fuji_Desktop_Single_image_EBF_1x_v2._SY304_CB573698005_.jpg"
-                    alt="shop-1"
-                    className="shop-1" />
+                    alt="shopItemsSingle"
+                    className="shopItemsSingle" />
                   Shop now
                 </a>
               </Paper>
@@ -281,21 +282,9 @@ const HomePage = () => {
                 <a href="/" className="shop-paragraph d-flex flex-column">
                   <img
                     src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/1460058_2528408_us_gw_pc_single_category_card_1x_379x304_us-en._SY304_CB609924360_.jpg"
-                    alt="shop-2"
-                    className="shop-2" />
+                    alt="shopItemsSingle"
+                    className="shopItemsSingle" />
                   Learn more
-                </a>
-              </Paper>
-              <Paper
-                className="paper d-flex flex-column"
-                sx={{ backgroundColor: '#fff', padding: 2.5, color: '#000', borderRadius: '0' }}>
-                <h5>Deals in PCs</h5>
-                <a href="/" className="shop-paragraph d-flex flex-column">
-                  <img
-                    src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Events/2023/EBF23/Fuji_Desktop_Single_image_EBF_1x_v1._SY304_CB573698005_.jpg"
-                    alt="shop-3"
-                    className="shop-3" />
-                  Shop now
                 </a>
               </Paper>
               <Paper
@@ -311,15 +300,15 @@ const HomePage = () => {
                     <a href="/" className="shopGroup-paragraph d-flex flex-column">
                       <img
                         src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Events/2024/BAU2024Sept/CleaningTool_1x._SY116_CB563137408_.jpg"
-                        alt="shop-4-1"
-                        className="shop-4-1" />
+                        alt="shopItemsGroup"
+                        className="shopItemsGroup" />
                       Cleaning Tools
                     </a>
                     <a href="/" className="shopGroup-paragraph d-flex flex-column">
                       <img
                         src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Events/2024/BAU2024Sept/HomeStorage_1x._SY116_CB563137408_.jpg"
-                        alt="shop-4-2"
-                        className="shop-4-2" />
+                        alt="shopItemsGroup"
+                        className="shopItemsGroup" />
                       Home Storage
                     </a>
                   </div>
@@ -327,89 +316,155 @@ const HomePage = () => {
                     <a href="/" className="shopGroup-paragraph d-flex flex-column">
                       <img
                         src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Events/2024/BAU2024Sept/HomeDecor_1x._SY116_CB563137408_.jpg"
-                        alt="shop-4-3"
-                        className="shop-4-3" />
+                        alt="shopItemsGroup"
+                        className="shopItemsGroup" />
                       Home Decor
                     </a>
                     <a href="/" className="shopGroup-paragraph d-flex flex-column">
                       <img
                         src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Events/2024/BAU2024Sept/Bedding_1x._SY116_CB563137408_.jpg"
-                        alt="shop-4-4"
-                        className="shop-4-4" />
+                        alt="shopItemsGroup"
+                        className="shopItemsGroup" />
                       Bedding
                     </a>
                   </div>
                 </Grid>
                 <a href="/" className="shop-paragraph">Discover more in Home</a>
               </Paper>
+              <Paper
+                className="paper d-flex flex-column"
+                sx={{ backgroundColor: '#fff', padding: 2.5, color: '#000', borderRadius: '0' }}>
+                <h5>Deals in PCs</h5>
+                <a href="/" className="shop-paragraph d-flex flex-column">
+                  <img
+                    src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Events/2023/EBF23/Fuji_Desktop_Single_image_EBF_1x_v1._SY304_CB573698005_.jpg"
+                    alt="shopItemsSingle"
+                    className="shopItemsSingle" />
+                  Shop now
+                </a>
+              </Paper>
+
             </div>
 
-              <div className="d-flex justify-content-center gap-4">
-                <Paper
-                  className="paper d-flex flex-column"
-                  sx={{ backgroundColor: '#fff', padding: 2.5, color: '#000', borderRadius: '0' }}>
-                  <h5>Small gifts under $20</h5>
-                  <a href="/" className="shop-paragraph d-flex flex-column">
-                    <img src="shop-1.jpg" alt="shop-1" className="shop-1" />
-                    Shop now
-                  </a>
-                </Paper>
-                <Paper
-                  className="paper d-flex flex-column"
-                  sx={{ backgroundColor: '#fff', padding: 2.5, color: '#000', borderRadius: '0' }}>
-                  <h5>FREE Shipping to Thailand</h5>
-                  <a href="/" className="shop-paragraph d-flex flex-column">
-                    <img src="shop-2.jpg" alt="shop-2" className="shop-2" />
-                    Learn more
-                  </a>
-                </Paper>
-                <Paper
-                  className="paper d-flex flex-column"
-                  sx={{ backgroundColor: '#fff', padding: 2.5, color: '#000', borderRadius: '0' }}>
-                  <h5>Get your game on</h5>
-                  <a href="/" className="shop-paragraph d-flex flex-column">
-                    <img src="shop-3.jpg" alt="shop-3" className="shop-3" />
-                    Shop gaming
-                  </a>
-                </Paper>
-                <Paper
-                  className="paper d-flex flex-column"
-                  sx={{ backgroundColor: '#fff', padding: 2.5, color: '#000', borderRadius: '0' }}>
-                  <h5>Shop for your home essentials</h5>
-                  <Grid
-                    container
-                    direction="column"
-                    spacing={3}
-                    className="menuGroup">
-                    <div className="d-flex gap-3">
-                      <a href="/" className="shopGroup-paragraph d-flex flex-column">
-                        <img src="shop-4-1.jpg" alt="shop-4-1" className="shop-4-1" />
-                        Cleaning Tools
-                      </a>
-                      <a href="/" className="shopGroup-paragraph d-flex flex-column">
-                        <img src="shop-4-2.jpg" alt="shop-4-2" className="shop-4-2" />
-                        Cleaning Tools
-                      </a>
-                    </div>
-                    <div className="d-flex gap-3">
-                      <a href="/" className="shopGroup-paragraph d-flex flex-column">
-                        <img src="shop-4-3.jpg" alt="shop-4-3" className="shop-4-3" />
-                        Cleaning Tools
-                      </a>
-                      <a href="/" className="shopGroup-paragraph d-flex flex-column">
-                        <img src="shop-4-4.jpg" alt="shop-4-4" className="shop-4-4" />
-                        Cleaning Tools
-                      </a>
-                    </div>
-                  </Grid>
-                  <a href="/" className="shop-paragraph">Discover more in Home</a>
-                </Paper>
-              </div>
+            <div className="d-flex justify-content-center gap-4">
+              <Paper
+                className="paper d-flex flex-column"
+                sx={{ backgroundColor: '#fff', padding: 2.5, color: '#000', borderRadius: '0' }}>
+                <h5>Shop for your home essentials</h5>
+                <Grid
+                  container
+                  direction="column"
+                  spacing={3}
+                  className="menuGroup">
+                  <div className="d-flex gap-3">
+                    <a href="/" className="shopGroup-paragraph d-flex flex-column">
+                      <img
+                        src="https://images-na.ssl-images-amazon.com/images/G/01/DiscoTec/2024/BFCM/GW/Quad_Cards/BFCM_2024_761_BFW_CM_DQC_Home_1A_1x_v3._SY116_CB541717183_.jpg"
+                        alt="shopItemsGroup"
+                        className="shopItemsGroup" />
+                      Home
+                    </a>
+                    <a href="/" className="shopGroup-paragraph d-flex flex-column">
+                      <img
+                        src="https://images-na.ssl-images-amazon.com/images/G/01/DiscoTec/2024/BFCM/GW/Quad_Cards/BFCM_2024_767_BFW_CM_DQC_Sports_Outdoors_2C_1x_v3._SY116_CB541717183_.jpg"
+                        alt="shopItemsGroup"
+                        className="shopItemsGroup" />
+                      Sports & outdoors
+                    </a>
+                  </div>
+                  <div className="d-flex gap-3">
+                    <a href="/" className="shopGroup-paragraph d-flex flex-column">
+                      <img
+                        src="https://images-na.ssl-images-amazon.com/images/G/01/DiscoTec/2024/BFCM/GW/Quad_Cards/BFCM_2024_764_BFW_CM_DQC_Beauty_1D_1x_v3._SY116_CB541717183_.jpg"
+                        alt="shopItemsGroup"
+                        className="shopItemsGroup" />
+                      Beauty
+                    </a>
+                    <a href="/" className="shopGroup-paragraph d-flex flex-column">
+                      <img
+                        src="https://images-na.ssl-images-amazon.com/images/G/01/DiscoTec/2024/BFCM/GW/Quad_Cards/BFCM_2024_766_BFW_CM_DQC_Headphones_2B_1x_v3._SY116_CB541717183_.jpg"
+                        alt="shopItemsGroup"
+                        className="shopItemsGroup" />
+                      Headphones
+                    </a>
+                  </div>
+                </Grid>
+                <a href="/" className="shop-paragraph">Shop all deals</a>
+              </Paper>
+              <Paper
+                className="paper d-flex flex-column"
+                sx={{ backgroundColor: '#fff', padding: 2.5, color: '#000', borderRadius: '0' }}>
+                <h5>Shop for your home essentials</h5>
+                <Grid
+                  container
+                  direction="column"
+                  spacing={3}
+                  className="menuGroup">
+                  <div className="d-flex gap-3">
+                    <a href="/" className="shopGroup-paragraph d-flex flex-column">
+                      <img
+                        src="https://images-na.ssl-images-amazon.com/images/G/01/DiscoTec/2024/BFCM/GW/Quad_Cards/BFCM_2024_763_BFW_CM_DQC_ComputerVideoGames_1C_1x_v3._SY116_CB541717183_.jpg"
+                        alt="shopItemsGroup"
+                        className="shopItemsGroup" />
+                      Tech & gaming
+                    </a>
+                    <a href="/" className="shopGroup-paragraph d-flex flex-column">
+                      <img
+                        src="https://images-na.ssl-images-amazon.com/images/G/01/DiscoTec/2024/BFCM/GW/Quad_Cards/BFCM_2024_771_BFW_CM_DQC_Deals_Toys_Games_3C_1x_v3._SY116_CB541717183_.jpg"
+                        alt="shopItemsGroup"
+                        className="shopItemsGroup" />
+                      Toys & games
+                    </a>
+                  </div>
+                  <div className="d-flex gap-3">
+                    <a href="/" className="shopGroup-paragraph d-flex flex-column">
+                      <img
+                        src="https://images-na.ssl-images-amazon.com/images/G/01/DiscoTec/2024/BFCM/GW/Quad_Cards/BFCM_2024_765_BFW_CM_DQC_Kitchen_2A_1x_v3._SY116_CB541717183_.jpg"
+                        alt="shopItemsGroup"
+                        className="shopItemsGroup" />
+                      Kitchen
+                    </a>
+                    <a href="/" className="shopGroup-paragraph d-flex flex-column">
+                      <img
+                        src="https://images-na.ssl-images-amazon.com/images/G/01/DiscoTec/2024/BFCM/GW/Quad_Cards/BFCM_2024_762_BFW_CM_DQC_Fashion_1B_1x_v3._SY116_CB541717183_.jpg"
+                        alt="shopItemsGroup"
+                        className="shopItemsGroup" />
+                      Fashion
+                    </a>
+                  </div>
+                </Grid>
+                <a href="/" className="shop-paragraph">Shop all deals</a>
+              </Paper>
+              <Paper
+                className="paper d-flex flex-column"
+                sx={{ backgroundColor: '#fff', padding: 2.5, color: '#000', borderRadius: '0' }}>
+                <h5>Get your game on</h5>
+                <a href="/" className="shop-paragraph d-flex flex-column">
+                  <img
+                    src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Events/2024/Stores-Gaming/FinalGraphics/Fuji_Gaming_store_Dashboard_card_1x_EN._SY304_CB564799420_.jpg"
+                    alt="shopItemsSingle"
+                    className="shopItemsSingle" />
+                  Shop gaming
+                </a>
+              </Paper>
+              <Paper
+                className="paper d-flex flex-column"
+                sx={{ backgroundColor: '#fff', padding: 2.5, color: '#000', borderRadius: '0' }}>
+                <h5>Toys under $25</h5>
+                <a href="/" className="shop-paragraph d-flex flex-column">
+                  <img
+                    src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Events/2023/EBF23/Fuji_Desktop_Single_image_EBF_1x_v3._SY304_CB573698005_.jpg"
+                    alt="shopItemsSingle"
+                    className="shopItemsSingle" />
+                  Shop now
+                </a>
+              </Paper>
+            </div>
 
             <Paper
               sx={{ backgroundColor: '#fff', padding: 2.5, color: '#000', borderRadius: '0' }}>
               <h5>Related to items you've viewed
-                <a href="/" className="shop-paragraph">See more</a>
+                <a href="/" className="shop-paragraph-h">See more</a>
               </h5>
               <div className="relatedItems d-flex gap-4">
                 <img src="https://m.media-amazon.com/images/I/71cZRBR0kHL._AC_SY200_.jpg" alt="relatedItems" />
@@ -455,67 +510,6 @@ const HomePage = () => {
               </div>
             </Paper>
 
-            <div className="d-flex justify-content-center gap-4">
-              <Paper
-                className="paper d-flex flex-column"
-                sx={{ backgroundColor: '#fff', padding: 2.5, color: '#000', borderRadius: '0' }}>
-                <h5>Small gifts under $20</h5>
-                <a href="/" className="shop-paragraph d-flex flex-column">
-                  <img src="shop-1.jpg" alt="shop-1" className="shop-1" />
-                  Shop now
-                </a>
-              </Paper>
-              <Paper
-                className="paper d-flex flex-column"
-                sx={{ backgroundColor: '#fff', padding: 2.5, color: '#000', borderRadius: '0' }}>
-                <h5>FREE Shipping to Thailand</h5>
-                <a href="/" className="shop-paragraph d-flex flex-column">
-                  <img src="shop-2.jpg" alt="shop-2" className="shop-2" />
-                  Learn more
-                </a>
-              </Paper>
-              <Paper
-                className="paper d-flex flex-column"
-                sx={{ backgroundColor: '#fff', padding: 2.5, color: '#000', borderRadius: '0' }}>
-                <h5>Get your game on</h5>
-                <a href="/" className="shop-paragraph d-flex flex-column">
-                  <img src="shop-3.jpg" alt="shop-3" className="shop-3" />
-                  Shop gaming
-                </a>
-              </Paper>
-              <Paper
-                className="paper d-flex flex-column"
-                sx={{ backgroundColor: '#fff', padding: 2.5, color: '#000', borderRadius: '0' }}>
-                <h5>Shop for your home essentials</h5>
-                <Grid
-                  container
-                  direction="column"
-                  spacing={3}
-                  className="menuGroup">
-                  <div className="d-flex gap-3">
-                    <a href="/" className="shopGroup-paragraph d-flex flex-column">
-                      <img src="shop-4-1.jpg" alt="shop-4-1" className="shop-4-1" />
-                      Cleaning Tools
-                    </a>
-                    <a href="/" className="shopGroup-paragraph d-flex flex-column">
-                      <img src="shop-4-2.jpg" alt="shop-4-2" className="shop-4-2" />
-                      Cleaning Tools
-                    </a>
-                  </div>
-                  <div className="d-flex gap-3">
-                    <a href="/" className="shopGroup-paragraph d-flex flex-column">
-                      <img src="shop-4-3.jpg" alt="shop-4-3" className="shop-4-3" />
-                      Cleaning Tools
-                    </a>
-                    <a href="/" className="shopGroup-paragraph d-flex flex-column">
-                      <img src="shop-4-4.jpg" alt="shop-4-4" className="shop-4-4" />
-                      Cleaning Tools
-                    </a>
-                  </div>
-                </Grid>
-                <a href="/" className="shop-paragraph">Discover more in Home</a>
-              </Paper>
-            </div>
           </Grid>
         </Box>
       </main>
