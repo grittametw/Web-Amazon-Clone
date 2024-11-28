@@ -1,12 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 
 body {
+    position: relative;
     width: 100%;
     height: 100%;
     margin: 0;
     padding: 0;
     font-family: "Geist", sans-serif;
     background-color: #e3e6e6;
+    z-index: 1;
 }
 
 .overlay {
@@ -80,6 +82,12 @@ body {
 
 .list-group-info.open {
     width: 365px;
+}
+
+.historyBar {
+    width: 100%;
+    height: 600px;
+    background-color: #057487;
 }
 
 .navBar a,
@@ -225,6 +233,9 @@ p {
 
 .background {
     width: 1500px;
+    position: absolute;
+    top: 96px;
+    z-index: -1;
 }
 
 .shopItemsSingle {
@@ -237,6 +248,11 @@ p {
 .shopItemsGroup {
     width: 147px;
     height: 120px;
+}
+
+.shopItemsGroupO {
+    width: 147px;
+    height: 108px;
 }
 
 .searchBar {
@@ -356,19 +372,13 @@ p {
     margin: 0;
 }
 
-.boxxx {
-    position: absolute;
-    top: 350px;
-}
-
 .boxButton {
     width: 1500px;
     height: 254px;
-    position: absolute;
 }
 
-main .changeBGLButton,
-main .changeBGRButton {
+.changeBGLButton,
+.changeBGRButton {
     width: 80px;
     background-color: transparent;
     border: none;
@@ -376,6 +386,7 @@ main .changeBGRButton {
 
 .paper h5 {
     font-weight: 700;
+    width: 310px;
 }
 
 .menuGroup {
@@ -386,4 +397,18 @@ main .changeBGRButton {
 .relatedItems {
     width: 1434px;
     overflow-x: scroll;
+    padding-bottom: 16px;
+}
+
+.relatedItems::-webkit-scrollbar {
+    height: 6px;
+}
+
+.relatedItems::-webkit-scrollbar-thumb {
+    background-color: #aaaaaa;
+    border-radius: 8px;
+}
+
+.relatedItems::-webkit-scrollbar-thumb:hover {
+    background-color: #888888;
 }

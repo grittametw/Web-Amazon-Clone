@@ -29,7 +29,7 @@ const HomePage = () => {
   const toggleSidebar2 = () => setSidebarOpen2(!isSidebarOpen2);
 
   return (
-    <body className={`main ${isSidebarOpen1 ? 'sidebar-open' : ''}`}>
+    <body className={`body${isSidebarOpen1 ? 'sidebar-open' : ''}`}>
       {isSidebarOpen1 && <div className="overlay" onClick={toggleSidebar1}></div>}
       <nav expand="lg" className="navBar navbar-dark d-flex justify-content-between align-items-center">
         <a href="/" className="web">
@@ -246,8 +246,9 @@ const HomePage = () => {
         </div>
       </div>
 
-      <main className="d-flex justify-content-center">
+      <main className="d-flex flex-column justify-content-center align-items-center">
         <img src="background.jpg" alt="background" className="background" />
+
         <div className="boxButton d-flex justify-content-between">
           <button className="changeBGLButton">
             <ArrowBackIosNewIcon className="arrow-icon" sx={{ fontSize: 48 }} />
@@ -257,7 +258,7 @@ const HomePage = () => {
           </button>
         </div>
 
-        <Box className="boxxx">
+        <Box className="boxxx d-flex flex-column justify-content-center align-items-center">
           <Grid
             container
             direction="column"
@@ -350,7 +351,7 @@ const HomePage = () => {
               <Paper
                 className="paper d-flex flex-column"
                 sx={{ backgroundColor: '#fff', padding: 2.5, color: '#000', borderRadius: '0' }}>
-                <h5>Shop for your home essentials</h5>
+                <h5>Must-see Black Friday Week deals</h5>
                 <Grid
                   container
                   direction="column"
@@ -361,14 +362,14 @@ const HomePage = () => {
                       <img
                         src="https://images-na.ssl-images-amazon.com/images/G/01/DiscoTec/2024/BFCM/GW/Quad_Cards/BFCM_2024_761_BFW_CM_DQC_Home_1A_1x_v3._SY116_CB541717183_.jpg"
                         alt="shopItemsGroup"
-                        className="shopItemsGroup" />
+                        className="shopItemsGroupO" />
                       Home
                     </a>
                     <a href="/" className="shopGroup-paragraph d-flex flex-column">
                       <img
                         src="https://images-na.ssl-images-amazon.com/images/G/01/DiscoTec/2024/BFCM/GW/Quad_Cards/BFCM_2024_767_BFW_CM_DQC_Sports_Outdoors_2C_1x_v3._SY116_CB541717183_.jpg"
                         alt="shopItemsGroup"
-                        className="shopItemsGroup" />
+                        className="shopItemsGroupO" />
                       Sports & outdoors
                     </a>
                   </div>
@@ -377,14 +378,14 @@ const HomePage = () => {
                       <img
                         src="https://images-na.ssl-images-amazon.com/images/G/01/DiscoTec/2024/BFCM/GW/Quad_Cards/BFCM_2024_764_BFW_CM_DQC_Beauty_1D_1x_v3._SY116_CB541717183_.jpg"
                         alt="shopItemsGroup"
-                        className="shopItemsGroup" />
+                        className="shopItemsGroupO" />
                       Beauty
                     </a>
                     <a href="/" className="shopGroup-paragraph d-flex flex-column">
                       <img
                         src="https://images-na.ssl-images-amazon.com/images/G/01/DiscoTec/2024/BFCM/GW/Quad_Cards/BFCM_2024_766_BFW_CM_DQC_Headphones_2B_1x_v3._SY116_CB541717183_.jpg"
                         alt="shopItemsGroup"
-                        className="shopItemsGroup" />
+                        className="shopItemsGroupO" />
                       Headphones
                     </a>
                   </div>
@@ -394,7 +395,7 @@ const HomePage = () => {
               <Paper
                 className="paper d-flex flex-column"
                 sx={{ backgroundColor: '#fff', padding: 2.5, color: '#000', borderRadius: '0' }}>
-                <h5>Shop for your home essentials</h5>
+                <h5>Black Friday Week deals are here</h5>
                 <Grid
                   container
                   direction="column"
@@ -405,14 +406,14 @@ const HomePage = () => {
                       <img
                         src="https://images-na.ssl-images-amazon.com/images/G/01/DiscoTec/2024/BFCM/GW/Quad_Cards/BFCM_2024_763_BFW_CM_DQC_ComputerVideoGames_1C_1x_v3._SY116_CB541717183_.jpg"
                         alt="shopItemsGroup"
-                        className="shopItemsGroup" />
+                        className="shopItemsGroupO" />
                       Tech & gaming
                     </a>
                     <a href="/" className="shopGroup-paragraph d-flex flex-column">
                       <img
                         src="https://images-na.ssl-images-amazon.com/images/G/01/DiscoTec/2024/BFCM/GW/Quad_Cards/BFCM_2024_771_BFW_CM_DQC_Deals_Toys_Games_3C_1x_v3._SY116_CB541717183_.jpg"
                         alt="shopItemsGroup"
-                        className="shopItemsGroup" />
+                        className="shopItemsGroupO" />
                       Toys & games
                     </a>
                   </div>
@@ -421,14 +422,14 @@ const HomePage = () => {
                       <img
                         src="https://images-na.ssl-images-amazon.com/images/G/01/DiscoTec/2024/BFCM/GW/Quad_Cards/BFCM_2024_765_BFW_CM_DQC_Kitchen_2A_1x_v3._SY116_CB541717183_.jpg"
                         alt="shopItemsGroup"
-                        className="shopItemsGroup" />
+                        className="shopItemsGroupO" />
                       Kitchen
                     </a>
                     <a href="/" className="shopGroup-paragraph d-flex flex-column">
                       <img
                         src="https://images-na.ssl-images-amazon.com/images/G/01/DiscoTec/2024/BFCM/GW/Quad_Cards/BFCM_2024_762_BFW_CM_DQC_Fashion_1B_1x_v3._SY116_CB541717183_.jpg"
                         alt="shopItemsGroup"
-                        className="shopItemsGroup" />
+                        className="shopItemsGroupO" />
                       Fashion
                     </a>
                   </div>
@@ -513,6 +514,11 @@ const HomePage = () => {
           </Grid>
         </Box>
       </main>
+
+
+      <div className="historyBar">
+        <h6>See personalized recommendations</h6>
+      </div>
     </body>
   );
 }
