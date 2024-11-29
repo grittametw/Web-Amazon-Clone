@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
@@ -16,6 +16,15 @@ const HomePage = () => {
 
   const [isSidebarOpen1, setSidebarOpen1] = useState(false);
   const [isSidebarOpen2, setSidebarOpen2] = useState(false);
+  const [slideIndex, setSlideIndex] = useState(0);
+
+  const slides = [
+    "https://m.media-amazon.com/images/I/61K28C55p4L._SX3000_.jpg",
+    "https://m.media-amazon.com/images/I/71u+Dtt6JTL._SX3000_.jpg",
+    "https://m.media-amazon.com/images/I/61eo-28eQJL._SX3000_.jpg",
+    "https://m.media-amazon.com/images/I/71Ie3JXGfVL._SX3000_.jpg",
+    "https://m.media-amazon.com/images/I/71CtV-IknvL._SX3000_.jpg",
+  ];
 
   const handleMouseEnter = () => {
     setDropdownVisible(true)
@@ -27,6 +36,22 @@ const HomePage = () => {
 
   const toggleSidebar1 = () => setSidebarOpen1(!isSidebarOpen1);
   const toggleSidebar2 = () => setSidebarOpen2(!isSidebarOpen2);
+
+  const prevSlide = () => {
+    setSlideIndex((prev) => (prev - 1 + slides.length) % slides.length);
+  };
+
+  const nextSlide = () => {
+    setSlideIndex((prev) => (prev + 1) % slides.length);
+  };
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setSlideIndex((prev) => (prev + 1) % slides.length);
+    }, 5000);
+  
+    return () => clearInterval(interval);
+  }, [slides.length]);
 
   return (
     <body className={`body${isSidebarOpen1 ? 'sidebar-open' : ''}`}>
@@ -247,13 +272,13 @@ const HomePage = () => {
       </div>
 
       <main className="d-flex flex-column justify-content-center align-items-center">
-        <img src="background.jpg" alt="background" className="background" />
+        <img src={slides[slideIndex]} alt="background" className="background" />
 
         <div className="boxButton d-flex justify-content-between">
-          <button className="changeBGLButton">
+          <button className="changeBGLButton" onClick={prevSlide}>
             <ArrowBackIosNewIcon className="arrow-icon" sx={{ fontSize: 48 }} />
           </button>
-          <button className="changeBGRButton">
+          <button className="changeBGRButton" onClick={nextSlide}>
             <ArrowForwardIosIcon className="arrow-icon" sx={{ fontSize: 48 }} />
           </button>
         </div>
@@ -517,7 +542,7 @@ const HomePage = () => {
 
 
       <div className="historyBar">
-        <h6>See personalized recommendations</h6>
+        <h6>Gift ideas inspired by your shopping history</h6>
       </div>
     </body>
   );
