@@ -49,7 +49,7 @@ const HomePage = () => {
     const interval = setInterval(() => {
       setSlideIndex((prev) => (prev + 1) % slides.length);
     }, 5000);
-  
+
     return () => clearInterval(interval);
   }, [slides.length]);
 
@@ -541,9 +541,51 @@ const HomePage = () => {
       </main>
 
 
-      <div className="historyBar">
-        <h6>Gift ideas inspired by your shopping history</h6>
+      <div className="historyBar d-flex flex-column justify-content-between">
+        <div className="historyBarBox d-flex flex-column">
+          <div className="d-flex justify-content-between">
+            <div className="d-flex">
+              <h6>Gift ideas inspired by your shopping history</h6>
+              <a href="/" className="shop-paragraph-h">Show more</a>
+            </div>
+            <p>Page 1 of 2</p>
+          </div>
+          <div className="historyItemsBox d-flex flex-column">
+            <img
+              src="https://images-na.ssl-images-amazon.com/images/I/51T9FwHWNhL._AC_UL165_SR165,165_.jpg"
+              alt="historyItems"
+              className="historyItems" />
+            <a href="/">Powerful PuroAir HEPA Air Purifiers for Home Large Rooms - Filters Up To 99% of Pollutants, Smoke, Pollen, Dust, and VOCs - Q
+              Powerful PuroAir HEPA Air Purifiers for Home Large Rooms - Filters Up</a>
+            <a href="/">10,717</a>
+            <p>70K+ viewed in past month</p>
+            <button>26% off</button>
+            <p>Cyber Monday Deal</p>
+            <p>Get it as soon as Monday, Dec 16</p>
+            <p>FREE Shipping by Amazon</p>
+          </div>
+        </div>
+        asd
       </div>
+      <div className="navFooterVertical">
+        <h6>Get to Know Us</h6>
+        <h6>Make Money with Us</h6>
+        <h6>Amazon Payment Products</h6>
+        <h6>Let Us Help You</h6>
+      </div>
+      <div className="navFooterLine">
+        <a href="/">Amazon Music Stream millions of songs</a>
+        <a href="/">Amazon Music Stream millions of songs</a>
+        <a href="/">Amazon Music Stream millions of songs</a>
+        <a href="/">Amazon Music Stream millions of songs</a>
+        <a href="/">Amazon Music Stream millions of songs</a>
+        <a href="/">Amazon Music Stream millions of songs</a>
+        <a href="/">Amazon Music Stream millions of songs</a>
+        <a href="/">Amazon Music Stream millions of songs</a>
+        <a href="/">Amazon Music Stream millions of songs</a>
+        <a href="/">Amazon Music Stream millions of songs</a>
+      </div>
+
     </body>
   );
 }
