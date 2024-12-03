@@ -555,9 +555,16 @@ const HomePage = () => {
               src="https://images-na.ssl-images-amazon.com/images/I/51T9FwHWNhL._AC_UL165_SR165,165_.jpg"
               alt="historyItems"
               className="historyItems" />
-            <a href="/">Powerful PuroAir HEPA Air Purifiers for Home Large Rooms - Filters Up To 99% of Pollutants, Smoke, Pollen, Dust, and VOCs - Q
+            <a href="/" className="historyItemsName">Powerful PuroAir HEPA Air Purifiers for Home Large Rooms - Filters Up To 99% of Pollutants, Smoke, Pollen, Dust, and VOCs - Q
               Powerful PuroAir HEPA Air Purifiers for Home Large Rooms - Filters Up</a>
-            <a href="/">10,717</a>
+            <a href="/">
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star"></span>
+              <span class="fa fa-star"></span>
+              <p>10,717</p>
+            </a>
             <p>70K+ viewed in past month</p>
             <button>26% off</button>
             <p>Cyber Monday Deal</p>
