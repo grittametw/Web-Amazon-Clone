@@ -438,16 +438,64 @@ p {
     padding: 8px 32px 8px 32px;
 }
 
+.historyItemsButton {
+    padding: 8px;
+    border: 1px solid #aaaaaa;
+    border-radius: 8px;
+    background-color: transparent;
+}
+
 .historyItemsBox {
-    width: 184px;
+    width: 176px;
+}
+
+.historyItemsBox p {
+    font-size: 12px;
+}
+
+.historyItemsBox button {
+    font-size: 12px;
+    border: none;
+    border-radius: 2px;
+    padding: 4px 6px 4px 6px;
+    color: #fff;
+    background-color: #cc0c39;
 }
 
 .historyItemsName {
+    font-size: 14px;
+    text-decoration: none;
+    color: #057487;
     display: -webkit-box;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
+
+    &:hover {
+        color: #c7511f;
+        text-decoration: underline
+    }
+}
+
+.historyItemsRating {
+    text-decoration: none;
+    color: #057487;
+
+    &:hover {
+        color: #c7511f;
+    }
+}
+
+.historyItemsRating p {
+    font-size: 12px;
+    font-weight: 400;
+    margin-left: 4px;
+}
+
+.historyItemsSale p {
+    color: #cc0c39;
+    margin-left: 6px;
 }
 
 .checked {

@@ -550,26 +550,163 @@ const HomePage = () => {
             </div>
             <p>Page 1 of 2</p>
           </div>
-          <div className="historyItemsBox d-flex flex-column">
-            <img
-              src="https://images-na.ssl-images-amazon.com/images/I/51T9FwHWNhL._AC_UL165_SR165,165_.jpg"
-              alt="historyItems"
-              className="historyItems" />
-            <a href="/" className="historyItemsName">Powerful PuroAir HEPA Air Purifiers for Home Large Rooms - Filters Up To 99% of Pollutants, Smoke, Pollen, Dust, and VOCs - Q
-              Powerful PuroAir HEPA Air Purifiers for Home Large Rooms - Filters Up</a>
-            <a href="/">
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star"></span>
-              <span class="fa fa-star"></span>
-              <p>10,717</p>
-            </a>
-            <p>70K+ viewed in past month</p>
-            <button>26% off</button>
-            <p>Cyber Monday Deal</p>
-            <p>Get it as soon as Monday, Dec 16</p>
-            <p>FREE Shipping by Amazon</p>
+          <div className="d-flex align-items-center gap-4">
+            <button className="historyItemsButton d-flex align-items-center"><ArrowBackIosNewIcon sx={{ fontSize: 16 }} /></button>
+            <div className="historyItemsBox d-flex flex-column">
+              <img
+                src="https://images-na.ssl-images-amazon.com/images/I/51T9FwHWNhL._AC_UL165_SR165,165_.jpg"
+                alt="historyItems"
+                className="historyItems" />
+              <a href="/" className="historyItemsName">Powerful PuroAir HEPA Air Purifiers for Home Large Rooms - Filters Up To 99% of Pollutants, Smoke, Pollen, Dust, and VOCs - Quiet HEPA Air Filter - Air Purifiers for Bedroom - Covers 1,115 Sq Ft</a>
+              <a href="/" className="d-flex historyItemsRating">
+                <span className="fa fa-star checked"></span>
+                <span className="fa fa-star checked"></span>
+                <span className="fa fa-star checked"></span>
+                <span className="fa fa-star checked"></span>
+                <span className="fa fa-star-half-full checked"></span>
+                <p>10,743</p>
+              </a>
+              <p>70K+ viewed in past month</p>
+              <div className="historyItemsSale d-flex align-items-center">
+                <button>26% off</button>
+                <p>Cyber Monday Deal</p>
+              </div>
+              <p>Get it as soon as Monday, Dec 16</p>
+              <p>FREE Shipping by Amazon</p>
+            </div>
+            <div className="historyItemsBox d-flex flex-column">
+              <img
+                src="https://images-na.ssl-images-amazon.com/images/I/71cZRBR0kHL._AC_UL165_SR165,165_.jpg"
+                alt="historyItems"
+                className="historyItems" />
+              <a href="/" className="historyItemsName">Shark Air Purifiers for Home Large Room with NeverChange Air Filter, 5 Year HEPA Filter, Covers 650 Sq. ft, Odor Neutralizer and Clean Sense Technology, Removes 99.98% of Dust & Allergens, HP152</a>
+              <a href="/" className="d-flex historyItemsRating">
+                <span className="fa fa-star checked"></span>
+                <span className="fa fa-star checked"></span>
+                <span className="fa fa-star checked"></span>
+                <span className="fa fa-star checked"></span>
+                <span className="fa fa-star-half-full checked"></span>
+                <p>10,743</p>
+              </a>
+              <p>70K+ viewed in past month</p>
+              <div className="historyItemsSale d-flex align-items-center">
+                <button>26% off</button>
+                <p>Cyber Monday Deal</p>
+              </div>
+              <p>Get it as soon as Monday, Dec 16</p>
+              <p>FREE Shipping by Amazon</p>
+            </div>
+            <div className="historyItemsBox d-flex flex-column">
+              <img
+                src="https://images-na.ssl-images-amazon.com/images/I/71IhljAoVGL._AC_UL165_SR165,165_.jpg"
+                alt="historyItems"
+                className="historyItems" />
+              <a href="/" className="historyItemsName">Shark Air Purifier for Home Large Room, Clean Sense Technology, HEPA Air Filter, 1000 Sq Ft, Kitchen, Captures 99.98% of Particles, Pet Dander, Pollutants, Dust, Smoke, Allergens & Smells, HP201</a>
+              <a href="/" className="d-flex historyItemsRating">
+                <span className="fa fa-star checked"></span>
+                <span className="fa fa-star checked"></span>
+                <span className="fa fa-star checked"></span>
+                <span className="fa fa-star checked"></span>
+                <span className="fa fa-star-half-full checked"></span>
+                <p>10,743</p>
+              </a>
+              <p>70K+ viewed in past month</p>
+              <div className="historyItemsSale d-flex align-items-center">
+                <button>26% off</button>
+                <p>Cyber Monday Deal</p>
+              </div>
+              <p>Get it as soon as Monday, Dec 16</p>
+              <p>FREE Shipping by Amazon</p>
+            </div>
+            <div className="historyItemsBox d-flex flex-column">
+              <img
+                src="https://images-na.ssl-images-amazon.com/images/I/71EKbl+krDL._AC_UL165_SR165,165_.jpg"
+                alt="historyItems"
+                className="historyItems" />
+              <a href="/" className="historyItemsName">Shark Air Purifiers for Bedroom, Office, Dorm, Small Room, HEPA Air Filter, Odor Eliminator, Covers Up To 500 SQ FT, Air Filtration Removes Smoke, Dust, Allergens, Pet Dander, and Pollutants, HP102</a>
+              <a href="/" className="d-flex historyItemsRating">
+                <span className="fa fa-star checked"></span>
+                <span className="fa fa-star checked"></span>
+                <span className="fa fa-star checked"></span>
+                <span className="fa fa-star checked"></span>
+                <span className="fa fa-star-half-full checked"></span>
+                <p>10,743</p>
+              </a>
+              <p>70K+ viewed in past month</p>
+              <div className="historyItemsSale d-flex align-items-center">
+                <button>26% off</button>
+                <p>Cyber Monday Deal</p>
+              </div>
+              <p>Get it as soon as Monday, Dec 16</p>
+              <p>FREE Shipping by Amazon</p>
+            </div>
+            <div className="historyItemsBox d-flex flex-column">
+              <img
+                src="https://images-na.ssl-images-amazon.com/images/I/61bARn6szFL._AC_UL165_SR165,165_.jpg"
+                alt="historyItems"
+                className="historyItems" />
+              <a href="/" className="historyItemsName">Honeywell AllergenPlus HEPA Air Purifier, Airborne Allergen Reducer for Medium Rooms, Reduces Allergens, Smoke, Wildfire Smoke, Pollen, Pet Dander and More, White, HPA104</a>
+              <a href="/" className="d-flex historyItemsRating">
+                <span className="fa fa-star checked"></span>
+                <span className="fa fa-star checked"></span>
+                <span className="fa fa-star checked"></span>
+                <span className="fa fa-star checked"></span>
+                <span className="fa fa-star-half-full checked"></span>
+                <p>10,743</p>
+              </a>
+              <p>70K+ viewed in past month</p>
+              <div className="historyItemsSale d-flex align-items-center">
+                <button>26% off</button>
+                <p>Cyber Monday Deal</p>
+              </div>
+              <p>Get it as soon as Monday, Dec 16</p>
+              <p>FREE Shipping by Amazon</p>
+            </div>
+            <div className="historyItemsBox d-flex flex-column">
+              <img
+                src="https://images-na.ssl-images-amazon.com/images/I/61-d0MX0UcL._AC_UL165_SR165,165_.jpg"
+                alt="historyItems"
+                className="historyItems" />
+              <a href="/" className="historyItemsName">Coway Airmega 400S App-Enabled Smart Air Purifier (Covers 1,560 sq. ft.), True HEPA Air Purifier with Smart Technology, Compatible with Amazon Alexa and Google Home, White (111012)</a>
+              <a href="/" className="d-flex historyItemsRating">
+                <span className="fa fa-star checked"></span>
+                <span className="fa fa-star checked"></span>
+                <span className="fa fa-star checked"></span>
+                <span className="fa fa-star checked"></span>
+                <span className="fa fa-star-half-full checked"></span>
+                <p>10,743</p>
+              </a>
+              <p>70K+ viewed in past month</p>
+              <div className="historyItemsSale d-flex align-items-center">
+                <button>26% off</button>
+                <p>Cyber Monday Deal</p>
+              </div>
+              <p>Get it as soon as Monday, Dec 16</p>
+              <p>FREE Shipping by Amazon</p>
+            </div>
+            <div className="historyItemsBox d-flex flex-column">
+              <img
+                src="https://images-na.ssl-images-amazon.com/images/I/81B7Up04D+L._AC_UL165_SR165,165_.jpg"
+                alt="historyItems"
+                className="historyItems" />
+              <a href="/" className="historyItemsName">Pure Enrichment PureZone Elite True HEPA Large Room Tower Air Purifier with Air Quality Monitor, 4 Stage Filtration and UV-C Light, Helps Destroy Bacteria, Smoke, Pollen & Dust (White)</a>
+              <a href="/" className="d-flex historyItemsRating">
+                <span className="fa fa-star checked"></span>
+                <span className="fa fa-star checked"></span>
+                <span className="fa fa-star checked"></span>
+                <span className="fa fa-star checked"></span>
+                <span className="fa fa-star-half-full checked"></span>
+                <p>10,743</p>
+              </a>
+              <p>70K+ viewed in past month</p>
+              <div className="historyItemsSale d-flex align-items-center">
+                <button>26% off</button>
+                <p>Cyber Monday Deal</p>
+              </div>
+              <p>Get it as soon as Monday, Dec 16</p>
+              <p>FREE Shipping by Amazon</p>
+            </div>
+            <button className="historyItemsButton d-flex align-items-center"><ArrowForwardIosIcon sx={{ fontSize: 16 }} /></button>
           </div>
         </div>
         asd
