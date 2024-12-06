@@ -550,7 +550,7 @@ const HomePage = () => {
             </div>
             <p>Page 1 of 2</p>
           </div>
-          <div className="d-flex align-items-center gap-4">
+          <div className="historyItemsBar d-flex align-items-center gap-4">
             <button className="historyItemsButton d-flex align-items-center"><ArrowBackIosNewIcon sx={{ fontSize: 16 }} /></button>
             <div className="historyItemsBox d-flex flex-column">
               <img
@@ -707,6 +707,14 @@ const HomePage = () => {
               <p>FREE Shipping by Amazon</p>
             </div>
             <button className="historyItemsButton d-flex align-items-center"><ArrowForwardIosIcon sx={{ fontSize: 16 }} /></button>
+          </div>
+          <div className="d-flex flex-column align-items-center p-4">
+            <h4>See personalized recommendations</h4>
+            <button className="signInButton">Sign in</button>
+            <div className="d-flex">
+              <p>New customer?</p>
+              <a href="/">Start here.</a>
+            </div>
           </div>
         </div>
         asd

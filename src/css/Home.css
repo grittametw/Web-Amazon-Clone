@@ -438,6 +438,12 @@ p {
     padding: 8px 32px 8px 32px;
 }
 
+.historyItemsBar {
+    padding-top: 24px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid #c0c0c0;
+}
+
 .historyItemsButton {
     padding: 8px;
     border: 1px solid #aaaaaa;
@@ -500,4 +506,11 @@ p {
 
 .checked {
     color: orange;
-  }
+}
+
+.signInButton {
+    border: 1px solid #e6a400;
+    border-radius: 4px;
+    width: 220px;
+    background-color: #ffc940;
+}
