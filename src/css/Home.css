@@ -86,12 +86,13 @@ body {
 
 .historyBar {
     width: 100%;
-    padding: 32px 0px 8px 0px;
+    padding: 40px 0px 20px 0px;
     background-color: #ffffff;
 }
 
 .navFooterVertical {
     width: 100%;
+    color: #ffffff;
     background-color: #232f3e;
 }
 
@@ -435,12 +436,12 @@ p {
 .historyBarBox {
     border: 1px solid #c0c0c0;
     border-radius: 4px;
-    padding: 8px 32px 8px 32px;
+    padding: 12px 32px 12px 32px;
 }
 
 .historyItemsBar {
     padding-top: 24px;
-    padding-bottom: 24px;
+    padding-bottom: 64px;
     border-bottom: 1px solid #c0c0c0;
 }
 
@@ -508,9 +509,58 @@ p {
     color: orange;
 }
 
+.personalizedRec {
+    padding-top: 32px;
+}
+
 .signInButton {
     border: 1px solid #e6a400;
     border-radius: 4px;
     width: 220px;
     background-color: #ffc940;
+}
+
+.newCTM .text,
+.newCTM .link {
+    font-size: 12px;
+    margin-top: 4px;
+}
+
+.newCTM .link {
+    text-decoration: none;
+    color: #057487;
+    margin-left: 4px;
+
+    &:hover {
+        color: #c7511f;
+        text-decoration: underline;
+    }
+}
+
+.navFooterVerticalBox {
+    padding: 48px 0px 48px 0px;
+    gap: 96px;
+}
+
+.navFooterVerticalBox a {
+    color: #c0c0c0;
+    font-size: 14px;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+.navFooterVerticalBox .box-1,
+.navFooterVerticalBox .box-2, 
+.navFooterVerticalBox .box-3, 
+.navFooterVerticalBox .box-4 {
+    gap: 8px;
+}
+
+.navFooterVerticalBox .box-2 {
+    width: 176px;
+}
+.navFooterVerticalBox .box-4 {
+    width: 136px;
 }

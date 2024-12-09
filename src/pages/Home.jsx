@@ -708,22 +708,57 @@ const HomePage = () => {
             </div>
             <button className="historyItemsButton d-flex align-items-center"><ArrowForwardIosIcon sx={{ fontSize: 16 }} /></button>
           </div>
-          <div className="d-flex flex-column align-items-center p-4">
+          <div className="personalizedRec d-flex flex-column align-items-center">
             <h4>See personalized recommendations</h4>
             <button className="signInButton">Sign in</button>
-            <div className="d-flex">
-              <p>New customer?</p>
-              <a href="/">Start here.</a>
+            <div className="newCTM d-flex">
+              <p className="text">New customer?</p>
+              <a href="/" className="link">Start here.</a>
             </div>
           </div>
         </div>
-        asd
       </div>
       <div className="navFooterVertical">
-        <h6>Get to Know Us</h6>
-        <h6>Make Money with Us</h6>
-        <h6>Amazon Payment Products</h6>
-        <h6>Let Us Help You</h6>
+        <div className="navFooterVerticalBox d-flex justify-content-center">
+          <div className="box-1 d-flex flex-column">
+            <h6>Get to Know Us</h6>
+            <a href="/">Careers</a>
+            <a href="/">Blog</a>
+            <a href="/">About Amazon</a>
+            <a href="/">Investor Relations</a>
+            <a href="/">Amazon Devices</a>
+            <a href="/">Amazon Science</a>
+          </div>
+          <div className="box-2 d-flex flex-column">
+            <h6>Make Money with Us</h6>
+            <a href="/">Sell products on Amazon</a>
+            <a href="/">Sell on Amazon Business</a>
+            <a href="/">Sell apps on Amazon</a>
+            <a href="/">Become an Affiliate</a>
+            <a href="/">Advertise Your Products</a>
+            <a href="/">Self-Publish with Us</a>
+            <a href="/">Host an Amazon Hub</a>
+            <a href="/">See More Make Money with Us</a>
+          </div>
+          <div className="box-3 d-flex flex-column">
+            <h6>Amazon Payment Products</h6>
+            <a href="/">Amazon Business Card</a>
+            <a href="/">Shop with Points</a>
+            <a href="/">Reload Your Balance</a>
+            <a href="/">Amazon Currency Converter</a>
+          </div>
+          <div className="box-4 d-flex flex-column">
+            <h6>Let Us Help You</h6>
+            <a href="/">Amazon and COVID-19</a>
+            <a href="/">Your Account</a>
+            <a href="/">Your Orders</a>
+            <a href="/">Shipping Rates & Policies</a>
+            <a href="/">Returns & Replacements</a>
+            <a href="/">Manage Your Content and Devices</a>
+            <a href="/">Help</a>
+          </div>
+        </div>
+
       </div>
       <div className="navFooterLine">
         <a href="/">Amazon Music Stream millions of songs</a>
