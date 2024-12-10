@@ -93,6 +93,7 @@ body {
 .navFooterVertical {
     width: 100%;
     color: #ffffff;
+    padding-bottom: 16px;
     background-color: #232f3e;
 }
 
@@ -360,6 +361,19 @@ p {
     padding: 4px 16px 4px 34px;
 }
 
+.topButton {
+    width: 100%;
+    font-size: 12px;
+    color: #ffffff;
+    padding: 16px;
+    border: none;
+    background-color: #37475a;
+
+    &:hover {
+        background-color: #485769;
+    }
+}
+
 .menu-signIn {
     font-size: 18px;
     font-weight: 600;
@@ -539,11 +553,12 @@ p {
 
 .navFooterVerticalBox {
     padding: 48px 0px 48px 0px;
-    gap: 96px;
+    gap: 112px;
+    border-bottom: 1px solid #c0c0c030;
 }
 
 .navFooterVerticalBox a {
-    color: #c0c0c0;
+    color: #e6e6e6;
     font-size: 14px;
     text-decoration: none;
 
@@ -551,9 +566,10 @@ p {
         text-decoration: underline;
     }
 }
+
 .navFooterVerticalBox .box-1,
-.navFooterVerticalBox .box-2, 
-.navFooterVerticalBox .box-3, 
+.navFooterVerticalBox .box-2,
+.navFooterVerticalBox .box-3,
 .navFooterVerticalBox .box-4 {
     gap: 8px;
 }
@@ -561,6 +577,21 @@ p {
 .navFooterVerticalBox .box-2 {
     width: 176px;
 }
+
 .navFooterVerticalBox .box-4 {
     width: 136px;
+}
+
+.langSetting {
+    font-size: 14px;
+    padding: 28px;
+    gap: 96px;
+}
+
+.langSetting a {
+    color: #ffffff;
+    border: 1px solid #c0c0c090;
+    border-radius: 4px;
+    padding: 8px 24px 8px 8px;
+    text-decoration: none;
 }

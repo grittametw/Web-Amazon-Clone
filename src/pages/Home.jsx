@@ -718,6 +718,9 @@ const HomePage = () => {
           </div>
         </div>
       </div>
+
+      <button className="topButton">Back to top</button>
+
       <div className="navFooterVertical">
         <div className="navFooterVerticalBox d-flex justify-content-center">
           <div className="box-1 d-flex flex-column">
@@ -758,19 +761,29 @@ const HomePage = () => {
             <a href="/">Help</a>
           </div>
         </div>
-
+        <div className="langSetting d-flex justify-content-center align-items-center">
+          <img src="amazon.png" alt="amazon" className="logo" />
+          <div className="d-flex gap-2">
+            <a href="/">English</a>
+            <a href="/">USD - U.S. Dollar</a>
+            <a href="/"><img src="us-flag.png" alt="us-flag" className="us-flag" />United States</a>
+          </div>
+        </div>
       </div>
+
       <div className="navFooterLine">
-        <a href="/">Amazon Music Stream millions of songs</a>
-        <a href="/">Amazon Music Stream millions of songs</a>
-        <a href="/">Amazon Music Stream millions of songs</a>
-        <a href="/">Amazon Music Stream millions of songs</a>
-        <a href="/">Amazon Music Stream millions of songs</a>
-        <a href="/">Amazon Music Stream millions of songs</a>
-        <a href="/">Amazon Music Stream millions of songs</a>
-        <a href="/">Amazon Music Stream millions of songs</a>
-        <a href="/">Amazon Music Stream millions of songs</a>
-        <a href="/">Amazon Music Stream millions of songs</a>
+        <div className="navFooterLineBox d-flex justify-content-center gap-5">
+          <a href="/">Amazon Music Stream millions of songs</a>
+          <a href="/">Amazon Music Stream millions of songs</a>
+          <a href="/">Amazon Music Stream millions of songs</a>
+          <a href="/">Amazon Music Stream millions of songs</a>
+          <a href="/">Amazon Music Stream millions of songs</a>
+          <a href="/">Amazon Music Stream millions of songs</a>
+          <a href="/">Amazon Music Stream millions of songs</a>
+          <a href="/">Amazon Music Stream millions of songs</a>
+          <a href="/">Amazon Music Stream millions of songs</a>
+          <a href="/">Amazon Music Stream millions of songs</a>
+        </div>
       </div>
 
     </body>
