@@ -772,17 +772,343 @@ const HomePage = () => {
       </div>
 
       <div className="navFooterLine">
-        <div className="navFooterLineBox d-flex justify-content-center gap-5">
-          <a href="/">Amazon Music Stream millions of songs</a>
-          <a href="/">Amazon Music Stream millions of songs</a>
-          <a href="/">Amazon Music Stream millions of songs</a>
-          <a href="/">Amazon Music Stream millions of songs</a>
-          <a href="/">Amazon Music Stream millions of songs</a>
-          <a href="/">Amazon Music Stream millions of songs</a>
-          <a href="/">Amazon Music Stream millions of songs</a>
-          <a href="/">Amazon Music Stream millions of songs</a>
-          <a href="/">Amazon Music Stream millions of songs</a>
-          <a href="/">Amazon Music Stream millions of songs</a>
+        <div className="navFooterLineBox d-flex justify-content-center">
+          <table>
+            <tr className="d-flex">
+              <td className="navFooterLineItems">
+                <a href="/">
+                  Amazon Music
+                  <p>
+                    Stream
+                    <br />
+                    millions
+                    <br />
+                    of songs
+                  </p>
+                </a>
+              </td>
+              <td className="navFooterLineSpacer"></td>
+              <td className="navFooterLineItems">
+                <a href="/">
+                  Amazon Ads
+                  <p>
+                    Reach customers
+                    <br />
+                    wherever they
+                    <br />
+                    spend their time
+                  </p>
+                </a>
+              </td>
+              <td className="navFooterLineSpacer"></td>
+              <td className="navFooterLineItems">
+                <a href="/">
+                  6pm
+                  <p>
+                    Score deals
+                    <br />
+                    on fashion brands
+                  </p>
+                </a>
+              </td>
+              <td className="navFooterLineSpacer"></td>
+              <td className="navFooterLineItems">
+                <a href="/">
+                  AbeBooks
+                  <p>
+                    Books, art
+                    <br />
+                    & collectibles
+                  </p>
+                </a>
+              </td>
+              <td className="navFooterLineSpacer"></td>
+              <td className="navFooterLineItems">
+                <a href="/">
+                  ACX
+                  <p>
+                    Audiobook Publishing
+                    <br />
+                    Made Easy
+                  </p>
+                </a>
+              </td>
+              <td className="navFooterLineSpacer"></td>
+              <td className="navFooterLineItems">
+                <a href="/">
+                  Sell on Amazon
+                  <p>
+                    Start a Selling
+                    <br />
+                    Account
+                  </p>
+                </a>
+              </td>
+              <td className="navFooterLineSpacer"></td>
+              <td className="navFooterLineItems">
+                <a href="/">
+                  Veeqo
+                  <p>
+                    Shipping Software
+                    <br />
+                    Inventory
+                    <br />
+                    Management
+                  </p>
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td>&nbsp;</td>
+              </tr>
+            <tr className="d-flex">
+              <td className="navFooterLineItems">
+                <a href="/">
+                  Amazon Business
+                  <p>
+                    Everything
+                    <br />
+                    For
+                    <br />
+                    Your
+                    <br />
+                    Business
+                  </p>
+                </a>
+              </td>
+              <td className="navFooterLineSpacer"></td>
+              <td className="navFooterLineItems">
+                <a href="/">
+                  AmazonGlobal
+                  <p>Ship Orders
+                    <br />
+                    Internationally
+                  </p>
+                </a>
+              </td>
+              <td className="navFooterLineSpacer"></td>
+              <td className="navFooterLineItems">
+                <a href="/">
+                  Home Services
+                  <p>Experienced Pros
+                    <br />
+                    Happiness
+                    <br />
+                    Guarantee
+                  </p>
+                </a>
+              </td>
+              <td className="navFooterLineSpacer"></td>
+              <td className="navFooterLineItems">
+                <a href="/">
+                  Amazon Web Services
+                  <p>
+                    Scalable Cloud
+                    <br />
+                    Computing
+                    <br />
+                    Services
+                  </p>
+                </a>
+              </td>
+              <td className="navFooterLineSpacer"></td>
+              <td className="navFooterLineItems">
+                <a href="/">
+                  Audible
+                  <p>
+                    Listen to Books &
+                    <br />
+                    Original
+                    <br />
+                    Audio Performances
+                  </p>
+                </a>
+              </td>
+              <td className="navFooterLineSpacer"></td>
+              <td className="navFooterLineItems">
+                <a href="/">
+                  Box Office Mojo
+                  <p>
+                    Find Movie
+                    <br />
+                    Box Office Data
+                  </p>
+                </a>
+              </td>
+              <td className="navFooterLineSpacer"></td>
+              <td className="navFooterLineItems">
+                <a href="/">
+                  Goodreads
+                  <p>
+                    Book reviews
+                    <br />
+                    &
+                    <br />
+                    recommendations
+                  </p>
+                </a>
+              </td>
+            </tr>
+            <tr>&nbsp;</tr>
+            <tr className="d-flex">
+              <td className="navFooterLineItems">
+                <a href="/">
+                  IMDb
+                  <p>
+                    Movies, TV
+                    <br />
+                    & Celebrities
+                  </p>
+                </a>
+              </td>
+              <td className="navFooterLineSpacer"></td>
+              <td className="navFooterLineItems">
+                <a href="/">
+                  IMDbPro
+                  <p>
+                    Get Info
+                    <br />
+                    Entertainment
+                    <br />
+                    Professionals
+                    <br />
+                    Need
+                  </p>
+                </a>
+              </td>
+              <td className="navFooterLineSpacer"></td>
+              <td className="navFooterLineItems">
+                <a href="/">
+                  Kindle Direct Publishing
+                  <p>
+                    Indie Digital &
+                    <br />
+                    Print Publishing
+                    <br />
+                    Made Easy
+                  </p>
+                </a>
+              </td>
+              <td className="navFooterLineSpacer"></td>
+              <td className="navFooterLineItems">
+                <a href="/">
+                  Prime Video Direct
+                  <p>
+                    Video
+                    <br />
+                    Distribution
+                    <br />
+                    Made Easy
+                  </p>
+                </a>
+              </td>
+              <td className="navFooterLineSpacer"></td>
+              <td className="navFooterLineItems">
+                <a href="/">
+                  Shopbop
+                  <p>
+                    Designer
+                    <br />
+                    FashionBrands
+                  </p>
+                </a>
+              </td>
+              <td className="navFooterLineSpacer"></td>
+              <td className="navFooterLineItems">
+                <a href="/">
+                  Woot!
+                  <p>
+                    Deals and
+                    <br />
+                    Shenanigans
+                  </p>
+                </a>
+              </td>
+              <td className="navFooterLineSpacer"></td>
+              <td className="navFooterLineItems">
+                <a href="/">
+                  Zappos
+                  <p>
+                    Shoes &
+                    <br />
+                    Clothing
+                  </p>
+                </a>
+              </td>
+            </tr>
+            <tr>&nbsp;</tr>
+            <tr className="d-flex">
+              <td className="navFooterLineItems">
+                <a href="/">
+                  Ring
+                  <p>
+                    Smart Home
+                    <br />
+                    Security
+                    <br />
+                    Systems
+                  </p>
+                </a>
+              </td>
+              <td className="navFooterLineSpacer"></td>
+              <td className="navFooterLineItems">
+                <a href="/">
+                  eero WiFi
+                  <p>
+                    Stream 4K Video
+                    <br />
+                    in Every Room
+                  </p>
+                </a>
+              </td>
+              <td className="navFooterLineSpacer"></td>
+              <td className="navFooterLineItems">
+                <a href="/">
+                  Blink
+                  <p>
+                    Smart Security
+                    <br />
+                    for Every Home
+                  </p>
+                </a>
+              </td>
+              <td className="navFooterLineSpacer"></td>
+              <td className="navFooterLineItems">
+                <a href="/">
+                  Neighbors App
+                  <p>
+                    Real-Time
+                    <br />
+                    Crime
+                    <br />
+                    & Safety Alerts
+                  </p>
+                </a>
+              </td>
+              <td className="navFooterLineSpacer"></td>
+              <td className="navFooterLineItems">
+                <a href="/">
+                  Amazon Subscription Boxes
+                  <p>
+                    Top subscription boxes –
+                    <br />
+                    right to your door
+                  </p>
+                </a>
+              </td>
+              <td className="navFooterLineSpacer"></td>
+              <td className="navFooterLineItems">
+                <a href="/">
+                  PillPack
+                  <p>
+                    Pharmacy
+                    <br />
+                    Simplified
+                  </p>
+                </a>
+              </td>
+            </tr>
+          </table>
         </div>
       </div>
 

@@ -595,3 +595,60 @@ p {
     padding: 8px 24px 8px 8px;
     text-decoration: none;
 }
+
+.navFooterLineBox {
+    padding: 24px 0px 24px 0px;
+}
+
+.navFooterLineItems {
+    line-height: 14px;
+}
+
+.navFooterLineItems a {
+    color: #e6e6e6;
+    font-size: 12px;
+    font-weight: 400;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.navFooterLineItems p {
+    color: #999999;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.navFooterLineSpacer {
+    width: 40px;
+}
+
+.navFooterLine tr .navFooterLineItems:first-child {
+    width: 80px;
+}
+
+.navFooterLine tr .navFooterLineItems:nth-child(3) {
+    width: 104px;
+}
+
+.navFooterLine tr .navFooterLineItems:nth-child(5) {
+    width: 108px;
+}
+
+.navFooterLine tr .navFooterLineItems:nth-child(7) {
+    width: 92px;
+}
+
+.navFooterLine tr .navFooterLineItems:nth-child(9) {
+    width: 148px;
+}
+
+.navFooterLine tr .navFooterLineItems:nth-child(11) {
+    width: 96px;
+}
+
+.navFooterLine tr .navFooterLineItems:nth-child(13) {
+    width: 112px;
+}
