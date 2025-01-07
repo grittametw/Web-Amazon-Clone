@@ -14,9 +14,43 @@ import '../css/Home.css'
 const HomePage = () => {
   const [isDropdownVisible, setDropdownVisible] = useState(false);
 
+  const [selectedOption, setSelectedOption] = useState('All');
+  const [isOpen, setIsOpen] = useState(false);
+
   const [isSidebarOpen1, setSidebarOpen1] = useState(false);
   const [isSidebarOpen2, setSidebarOpen2] = useState(false);
   const [slideIndex, setSlideIndex] = useState(0);
+
+  const options = [
+    { value: 'search-alias=aps', label: 'All Departments' },
+    { value: 'search-alias=arts-crafts-intl-ship', label: 'Arts & Crafts' },
+    { value: 'search-alias=automotive-intl-ship', label: 'Automotive' },
+    { value: 'search-alias=baby-products-intl-ship', label: 'Baby' },
+    { value: 'search-alias=beauty-intl-ship', label: 'Beauty & Personal Care' },
+    { value: 'search-alias=stripbooks-intl-ship', label: 'Books' },
+    { value: 'search-alias=fashion-boys-intl-ship', label: "Boys' Fashion" },
+    { value: 'search-alias=computers-intl-ship', label: 'Computers' },
+    { value: 'search-alias=deals-intl-ship', label: 'Deals' },
+    { value: 'search-alias=digital-music', label: 'Digital Music' },
+    { value: 'search-alias=electronics-intl-ship', label: 'Electronics' },
+    { value: 'search-alias=fashion-girls-intl-ship', label: "Girls' Fashion" },
+    { value: 'search-alias=hpc-intl-ship', label: 'Health & Household' },
+    { value: 'search-alias=kitchen-intl-ship', label: 'Home & Kitchen' },
+    { value: 'search-alias=industrial-intl-ship', label: 'Industrial & Scientific' },
+    { value: 'search-alias=digital-text', label: 'Kindle Store' },
+    { value: 'search-alias=luggage-intl-ship', label: 'Luggage' },
+    { value: 'search-alias=fashion-mens-intl-ship', label: "Men's Fashion" },
+    { value: 'search-alias=movies-tv-intl-ship', label: 'Movies & TV' },
+    { value: 'search-alias=music-intl-ship', label: 'Music, CDs & Vinyl' },
+    { value: 'search-alias=pets-intl-ship', label: 'Pet Supplies' },
+    { value: 'search-alias=instant-video', label: 'Prime Video' },
+    { value: 'search-alias=software-intl-ship', label: 'Software' },
+    { value: 'search-alias=sporting-intl-ship', label: 'Sports & Outdoors' },
+    { value: 'search-alias=tools-intl-ship', label: 'Tools & Home Improvement' },
+    { value: 'search-alias=toys-and-games-intl-ship', label: 'Toys & Games' },
+    { value: 'search-alias=videogames-intl-ship', label: 'Video Games' },
+    { value: 'search-alias=fashion-womens-intl-ship', label: "Women's Fashion" },
+  ];
 
   const slides = [
     "https://m.media-amazon.com/images/I/61K28C55p4L._SX3000_.jpg",
@@ -25,6 +59,12 @@ const HomePage = () => {
     "https://m.media-amazon.com/images/I/71Ie3JXGfVL._SX3000_.jpg",
     "https://m.media-amazon.com/images/I/71CtV-IknvL._SX3000_.jpg",
   ];
+
+  const toggleDropdown = () => setIsOpen(!isOpen);
+  const handleOptionClick = (option) => {
+    setSelectedOption(option.label);
+    setIsOpen(false);
+  };
 
   const handleMouseEnter = () => {
     setDropdownVisible(true)
@@ -69,11 +109,27 @@ const HomePage = () => {
         </a>
 
         <div className="searchBar d-flex">
-          <button variant="outline-success" className="filterButton d-flex align-items-center">All
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
-              <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
-            </svg>
-          </button>
+          <div className="filterButton">
+            <div className="select-button d-flex align-items-center" onClick={toggleDropdown}>
+              {selectedOption}
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
+              </svg>
+            </div>
+            {isOpen && (
+              <div className="custom-dropdown__options">
+                {options.map((option) => (
+                  <div
+                    key={option.value}
+                    className="custom-dropdown__option"
+                    onClick={() => handleOptionClick(option)}
+                  >
+                    {option.label}
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
           <input
             type="search"
             placeholder="Search Amazon"
@@ -141,7 +197,7 @@ const HomePage = () => {
           </div>
         </nav>
 
-        <aside className={`list-group ${isSidebarOpen1 ? 'open' : ''}`} id="list-example">
+        <div className={`list-group ${isSidebarOpen1 ? 'open' : ''}`} id="list-1">
           <button
             className="menuCloseBtn"
             onClick={toggleSidebar1}>
@@ -249,9 +305,9 @@ const HomePage = () => {
               <a href="/" className="d-flex align-items-center">Sign in</a>
             </div>
           </div>
-        </aside>
+        </div>
 
-        <div className={`list-group-info ${isSidebarOpen2 ? 'open' : ''}`} id="list-example">
+        <div className={`list-group-info ${isSidebarOpen2 ? 'open' : ''}`} id="list-2">
           <div className="menu-info">
             <button
               className="amazonMusicButton d-flex align-items-center"
@@ -858,9 +914,7 @@ const HomePage = () => {
                 </a>
               </td>
             </tr>
-            <tr>
-              <td>&nbsp;</td>
-              </tr>
+            <tr>&nbsp;</tr>
             <tr className="d-flex">
               <td className="navFooterLineItems">
                 <a href="/">
@@ -1109,6 +1163,15 @@ const HomePage = () => {
               </td>
             </tr>
           </table>
+        </div>
+        <div className="navFooterLineLink d-flex flex-column align-items-center">
+          <div>
+            <a href="/">Conditions of Use</a>
+            <a href="/">Privacy Notice</a>
+            <a href="/">Consumer Health Data Privacy Disclosure</a>
+            <a href="/">Your Ads Privacy Choices</a>
+          </div>
+          <p>© 1996-2024, Amazon.com, Inc. or its affiliates</p>
         </div>
       </div>
 

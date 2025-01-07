@@ -285,11 +285,42 @@ p {
 }
 
 .filterButton {
+    position: relative;
+    width: auto;
+}
+
+.select-button {
     font-size: 12px;
     background-color: #c0c0c0;
     border: none;
     border-radius: 4px 0 0 4px;
     padding: 10px;
+    cursor: pointer;
+}
+
+.custom-dropdown__options {
+    position: absolute;
+    width: 200px;
+    height: 540px;
+    top: 100%;
+    left: 0;
+    right: 0;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #fff;
+    overflow: auto;
+    z-index: 1000;
+}
+
+.custom-dropdown__option {
+    padding: 3px 0px 3px 5px;
+    cursor: pointer;
+}
+
+.custom-dropdown__option:hover {
+    background-color: #0066ff;
+    color: white;
 }
 
 .searchButton {
@@ -588,6 +619,10 @@ p {
     gap: 96px;
 }
 
+.langSetting .logo {
+    width: 80px;
+}
+
 .langSetting a {
     color: #ffffff;
     border: 1px solid #c0c0c090;
@@ -651,4 +686,28 @@ p {
 
 .navFooterLine tr .navFooterLineItems:nth-child(13) {
     width: 112px;
+}
+
+.navFooterLineLink {
+    font-weight: 300;
+    color: #ffffff;
+    padding-top: 16px;
+    padding-bottom: 24px;
+}
+
+.navFooterLineLink a {
+    color: #e6e6e6;
+    font-size: 12px;
+    text-decoration: none;
+    padding: 8px;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.navFooterLineLink p {
+    font-size: 12px;
+    font-weight: 300;
+
 }
