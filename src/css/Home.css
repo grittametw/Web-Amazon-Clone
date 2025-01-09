@@ -207,6 +207,12 @@ p {
     width: 24px;
 }
 
+.up-down-arrow {
+    width: 10px;
+    margin-left: 24px;
+    color: #c0c0c0;
+}
+
 .us-flag {
     width: 16px;
     margin-right: 4px;
@@ -559,10 +565,16 @@ p {
 }
 
 .signInButton {
-    border: 1px solid #e6a400;
-    border-radius: 4px;
-    width: 220px;
-    background-color: #ffc940;
+    font-size: 12px;
+    padding: 6px;
+    border: none;
+    border-radius: 15px;
+    width: 250px;
+    background-color: #ffd814;
+
+    &:hover {
+        background-color: #ffce12;
+    }
 }
 
 .newCTM .text,
@@ -623,8 +635,17 @@ p {
     width: 80px;
 }
 
-.langSetting a {
-    color: #ffffff;
+.langSetting a:first-child {
+    color: #c0c0c0;
+    border: 1px solid #c0c0c090;
+    border-radius: 4px;
+    padding: 8px 8px 8px 8px;
+    text-decoration: none;
+}
+
+.langSetting a:nth-child(2),
+.langSetting a:nth-child(3) {
+    color: #c0c0c0;
     border: 1px solid #c0c0c090;
     border-radius: 4px;
     padding: 8px 24px 8px 8px;

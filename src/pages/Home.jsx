@@ -4,6 +4,7 @@ import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import LanguageIcon from '@mui/icons-material/Language';
+import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid2';
@@ -820,9 +821,19 @@ const HomePage = () => {
         <div className="langSetting d-flex justify-content-center align-items-center">
           <img src="amazon.png" alt="amazon" className="logo" />
           <div className="d-flex gap-2">
-            <a href="/">English</a>
-            <a href="/">USD - U.S. Dollar</a>
-            <a href="/"><img src="us-flag.png" alt="us-flag" className="us-flag" />United States</a>
+            <a href="/" className="d-flex align-items-center">
+              <LanguageIcon sx={{ fontSize: 16, color: '#fff', mr: 1 }} />
+              English
+              <img src="up-down-arrow.png" alt="up-down-arrow" className="up-down-arrow" />
+            </a>
+            <a href="/" className="d-flex align-items-center">
+            <AttachMoneyIcon sx={{ fontSize: 16, color: '#fff' }} />
+            USD - U.S. Dollar
+            </a>
+            <a href="/" className="d-flex align-items-center">
+              <img src="us-flag.png" alt="us-flag" className="us-flag" />
+              United States
+            </a>
           </div>
         </div>
       </div>
