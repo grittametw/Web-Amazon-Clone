@@ -1,25 +1,12 @@
 import { useState, useEffect } from 'react'
-import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
-import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
-import AccountCircleIcon from '@mui/icons-material/AccountCircle';
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import LanguageIcon from '@mui/icons-material/Language';
-import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
-import ArrowBackIcon from '@mui/icons-material/ArrowBack';
-import Box from '@mui/material/Box';
-import Grid from '@mui/material/Grid2';
-import Paper from '@mui/material/Paper';
-import DropdownMenu from '../components/DropdownMenu'
+import { ArrowForwardIos, ArrowBackIosNew, AccountCircle, ExpandMore, Language, AttachMoney } from '@mui/icons-material';
+import { Box, Grid2, Paper } from '@mui/material';
 import '../css/Home.css'
 
 const HomePage = () => {
-  const [isDropdownVisible, setDropdownVisible] = useState(false);
-
   const [selectedOption, setSelectedOption] = useState('All');
   const [isOpen, setIsOpen] = useState(false);
-
   const [isSidebarOpen1, setSidebarOpen1] = useState(false);
-  const [isSidebarOpen2, setSidebarOpen2] = useState(false);
   const [slideIndex, setSlideIndex] = useState(0);
 
   const options = [
@@ -62,21 +49,12 @@ const HomePage = () => {
   ];
 
   const toggleDropdown = () => setIsOpen(!isOpen);
+  const toggleSidebar1 = () => setSidebarOpen1(!isSidebarOpen1);
+
   const handleOptionClick = (option) => {
     setSelectedOption(option.label);
     setIsOpen(false);
   };
-
-  const handleMouseEnter = () => {
-    setDropdownVisible(true)
-  };
-
-  const handleMouseLeave = () => {
-    setDropdownVisible(false)
-  };
-
-  const toggleSidebar1 = () => setSidebarOpen1(!isSidebarOpen1);
-  const toggleSidebar2 = () => setSidebarOpen2(!isSidebarOpen2);
 
   const prevSlide = () => {
     setSlideIndex((prev) => (prev - 1 + slides.length) % slides.length);
@@ -97,6 +75,8 @@ const HomePage = () => {
   return (
     <body className={`body${isSidebarOpen1 ? 'sidebar-open' : ''}`}>
       {isSidebarOpen1 && <div className="overlay" onClick={toggleSidebar1}></div>}
+
+      {/* NavbarFirst */}
       <nav expand="lg" className="navBar navbar-dark d-flex justify-content-between align-items-center">
         <a href="/" className="web">
           <img src="amazon.png" alt="amazon" className="logo" />
@@ -108,7 +88,6 @@ const HomePage = () => {
           </svg>
           <div>Deliver to<p>Thailand</p></div>
         </a>
-
         <div className="searchBar d-flex">
           <div className="filterButton">
             <div className="select-button d-flex align-items-center" onClick={toggleDropdown}>
@@ -142,29 +121,19 @@ const HomePage = () => {
             </svg>
           </button>
         </div>
-
         <a href="#action2" className="language d-flex align-items-center pt-3">
           <img src="us-flag.png" alt="us-flag" className="us-flag" />EN
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
             <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
           </svg>
         </a>
-        <div
-          className="sign d-flex"
-          onMouseEnter={handleMouseEnter}
-          onMouseLeave={handleMouseLeave}
-        >
-          <a href="#action3" className="lists">Hello, sign in<p>Account & Lists
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
-              <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
-            </svg></p>
-          </a>
-          <div className={`dropdown-content ${isDropdownVisible ? 'show' : ''}`}>
-            <DropdownMenu />
-          </div>
-        </div>
+        <a href="#action3" className="lists">Hello, sign in<p>Account & Lists
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+            <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
+          </svg></p>
+        </a>
         <a href="#action1" className="returnOrders">Returns <p>& Orders</p></a>
-        <a href="/cart" className="cartButton d-flex align-items-end">
+        <a href="/" className="cartButton d-flex align-items-end">
           <div className="cartAmount d-flex flex-column align-items-center ">
             0
             <img src="cart.svg" alt="cart" className="cart" />
@@ -173,6 +142,7 @@ const HomePage = () => {
         </a>
       </nav>
 
+      {/* NavbarSecond & Menubar */}
       <div className="B">
         <nav className="navBarB navbar-dark d-flex align-items-center">
           <button className="navbar-toggler d-flex align-items-center" onClick={toggleSidebar1}>
@@ -205,97 +175,85 @@ const HomePage = () => {
             &times;
           </button>
           <a href="/" className="menu-signIn d-flex align-items-center">
-            <AccountCircleIcon sx={{ fontSize: 28, color: '#ffffff', mr: 1 }} />
+            <AccountCircle sx={{ fontSize: 28, color: '#ffffff', mr: 1 }} />
             Hello, sign in
           </a>
           <div className="menu-info">
             <div className="menu-info-group">
               <div className="menu-title">Digital Content & Devices</div>
               <button
-                className="amazonMusicButton d-flex justify-content-between align-items-center"
-                onClick={toggleSidebar2}>
+                className="amazonMusicButton d-flex justify-content-between align-items-center">
                 Amazon Music
-                <ArrowForwardIosIcon className="arrow-icon" sx={{ fontSize: 16, color: '#c0c0c0' }} />
+                <ArrowForwardIos className="arrow-icon" sx={{ fontSize: 16, color: '#c0c0c0' }} />
               </button>
               <button
-                className="amazonMusicButton d-flex justify-content-between align-items-center"
-                onClick={toggleSidebar2}>
+                className="amazonMusicButton d-flex justify-content-between align-items-center">
                 Kindle E-readers & Books
-                <ArrowForwardIosIcon className="arrow-icon" sx={{ fontSize: 16, color: '#c0c0c0' }} />
+                <ArrowForwardIos className="arrow-icon" sx={{ fontSize: 16, color: '#c0c0c0' }} />
               </button>
               <button
-                className="amazonMusicButton d-flex justify-content-between align-items-center"
-                onClick={toggleSidebar2}>
+                className="amazonMusicButton d-flex justify-content-between align-items-center">
                 Amazon Appstore
-                <ArrowForwardIosIcon className="arrow-icon" sx={{ fontSize: 16, color: '#c0c0c0' }} />
+                <ArrowForwardIos className="arrow-icon" sx={{ fontSize: 16, color: '#c0c0c0' }} />
               </button>
             </div>
             <div className="menu-info-group">
               <div className="menu-title">Shop by Department</div>
               <button
-                className="amazonMusicButton d-flex justify-content-between align-items-center"
-                onClick={toggleSidebar2}>
+                className="amazonMusicButton d-flex justify-content-between align-items-center">
                 Electronics
-                <ArrowForwardIosIcon className="arrow-icon" sx={{ fontSize: 16, color: '#c0c0c0' }} />
+                <ArrowForwardIos className="arrow-icon" sx={{ fontSize: 16, color: '#c0c0c0' }} />
               </button>
               <button
-                className="amazonMusicButton d-flex justify-content-between align-items-center"
-                onClick={toggleSidebar2}>
+                className="amazonMusicButton d-flex justify-content-between align-items-center">
                 Computers
-                <ArrowForwardIosIcon className="arrow-icon" sx={{ fontSize: 16, color: '#c0c0c0' }} />
+                <ArrowForwardIos className="arrow-icon" sx={{ fontSize: 16, color: '#c0c0c0' }} />
               </button>
               <button
-                className="amazonMusicButton d-flex justify-content-between align-items-center"
-                onClick={toggleSidebar2}>
+                className="amazonMusicButton d-flex justify-content-between align-items-center">
                 Smart Home
-                <ArrowForwardIosIcon className="arrow-icon" sx={{ fontSize: 16, color: '#c0c0c0' }} />
+                <ArrowForwardIos className="arrow-icon" sx={{ fontSize: 16, color: '#c0c0c0' }} />
               </button>
               <button
-                className="amazonMusicButton d-flex justify-content-between align-items-center"
-                onClick={toggleSidebar2}>
+                className="amazonMusicButton d-flex justify-content-between align-items-center">
                 Arts & Crafts
-                <ArrowForwardIosIcon className="arrow-icon" sx={{ fontSize: 16, color: '#c0c0c0' }} />
+                <ArrowForwardIos className="arrow-icon" sx={{ fontSize: 16, color: '#c0c0c0' }} />
               </button>
               <button
-                className="seeAllButton d-flex align-items-center"
-                onClick={toggleSidebar2}>
+                className="seeAllButton d-flex align-items-center">
                 See all
-                <ExpandMoreIcon className="arrow-icon" sx={{ fontSize: 24, color: '#c0c0c0' }} />
+                <ExpandMore className="arrow-icon" sx={{ fontSize: 24, color: '#c0c0c0' }} />
               </button>
             </div>
             <div className="menu-info-group">
               <div className="menu-title">Programs & Features</div>
               <button
-                className="amazonMusicButton d-flex justify-content-between align-items-center"
-                onClick={toggleSidebar2}>
+                className="amazonMusicButton d-flex justify-content-between align-items-center">
                 Gift Cards
-                <ArrowForwardIosIcon className="arrow-icon" sx={{ fontSize: 16, color: '#c0c0c0' }} />
+                <ArrowForwardIos className="arrow-icon" sx={{ fontSize: 16, color: '#c0c0c0' }} />
               </button>
               <a href="/" className="d-flex align-items-center">Shop By Interest</a>
               <button
-                className="amazonMusicButton d-flex justify-content-between align-items-center"
-                onClick={toggleSidebar2}>
+                className="amazonMusicButton d-flex justify-content-between align-items-center">
                 Amazon Live
-                <ArrowForwardIosIcon className="arrow-icon" sx={{ fontSize: 16, color: '#c0c0c0' }} />
+                <ArrowForwardIos className="arrow-icon" sx={{ fontSize: 16, color: '#c0c0c0' }} />
               </button>
               <button
-                className="amazonMusicButton d-flex justify-content-between align-items-center"
-                onClick={toggleSidebar2}>
+                className="amazonMusicButton d-flex justify-content-between align-items-center">
                 International Shopping
-                <ArrowForwardIosIcon className="arrow-icon" sx={{ fontSize: 16, color: '#c0c0c0' }} />
+                <ArrowForwardIos className="arrow-icon" sx={{ fontSize: 16, color: '#c0c0c0' }} />
               </button>
               <button
-                className="seeAllButton d-flex align-items-center"
-                onClick={toggleSidebar2}>
+                className="seeAllButton d-flex align-items-center">
                 See all
-                <ExpandMoreIcon className="arrow-icon" sx={{ fontSize: 24, color: '#c0c0c0' }} />
+                <ExpandMore className="arrow-icon" sx={{ fontSize: 24, color: '#c0c0c0' }} />
               </button>
             </div>
             <div className="menu-info-groupHS">
               <div className="menu-title">Help & Settings</div>
               <a href="/" className="d-flex align-items-center">Your Account</a>
               <a href="/" className="d-flex align-items-center">
-                <LanguageIcon sx={{ fontSize: 14, color: '#c0c0c0', mr: 1 }} />
+                <Language sx={{ fontSize: 14, color: '#c0c0c0', mr: 1 }} />
                 English
               </a>
               <a href="/" className="d-flex align-items-center">
@@ -307,41 +265,23 @@ const HomePage = () => {
             </div>
           </div>
         </div>
-
-        <div className={`list-group-info ${isSidebarOpen2 ? 'open' : ''}`} id="list-2">
-          <div className="menu-info">
-            <button
-              className="amazonMusicButton d-flex align-items-center"
-              onClick={toggleSidebar2}>
-              <ArrowBackIcon className="arrow-icon" sx={{ fontSize: 20, color: '#c0c0c0', mr: 1 }} />
-              MAIN MENU
-            </button>
-            <div className="menu-info-group">
-              <div className="menu-title">Stream Music</div>
-              <a href="/" className="d-flex align-items-center">Amazon Music Unlimited</a>
-              <a href="/" className="d-flex align-items-center">Free Streaming Music</a>
-              <a href="/" className="d-flex align-items-center">Podcasts</a>
-              <a href="/" className="d-flex align-items-center">Open Web Player</a>
-              <a href="/" className="d-flex align-items-center">Download the app</a>
-            </div>
-          </div>
-        </div>
       </div>
 
+      {/* Main Content */}
       <main className="d-flex flex-column justify-content-center align-items-center">
         <img src={slides[slideIndex]} alt="background" className="background" />
 
         <div className="boxButton d-flex justify-content-between">
           <button className="changeBGLButton" onClick={prevSlide}>
-            <ArrowBackIosNewIcon className="arrow-icon" sx={{ fontSize: 48 }} />
+            <ArrowBackIosNew className="arrow-icon" sx={{ fontSize: 48 }} />
           </button>
           <button className="changeBGRButton" onClick={nextSlide}>
-            <ArrowForwardIosIcon className="arrow-icon" sx={{ fontSize: 48 }} />
+            <ArrowForwardIos className="arrow-icon" sx={{ fontSize: 48 }} />
           </button>
         </div>
 
         <Box className="boxxx d-flex flex-column justify-content-center align-items-center">
-          <Grid
+          <Grid2
             container
             direction="column"
             spacing={2.5}>
@@ -374,7 +314,7 @@ const HomePage = () => {
                 className="paper d-flex flex-column"
                 sx={{ backgroundColor: '#fff', padding: 2.5, color: '#000', borderRadius: '0' }}>
                 <h5>Shop for your home essentials</h5>
-                <Grid
+                <Grid2
                   container
                   direction="column"
                   spacing={3}
@@ -411,7 +351,7 @@ const HomePage = () => {
                       Bedding
                     </a>
                   </div>
-                </Grid>
+                </Grid2>
                 <a href="/" className="shop-paragraph">Discover more in Home</a>
               </Paper>
               <Paper
@@ -434,7 +374,7 @@ const HomePage = () => {
                 className="paper d-flex flex-column"
                 sx={{ backgroundColor: '#fff', padding: 2.5, color: '#000', borderRadius: '0' }}>
                 <h5>Must-see Black Friday Week deals</h5>
-                <Grid
+                <Grid2
                   container
                   direction="column"
                   spacing={3}
@@ -471,14 +411,14 @@ const HomePage = () => {
                       Headphones
                     </a>
                   </div>
-                </Grid>
+                </Grid2>
                 <a href="/" className="shop-paragraph">Shop all deals</a>
               </Paper>
               <Paper
                 className="paper d-flex flex-column"
                 sx={{ backgroundColor: '#fff', padding: 2.5, color: '#000', borderRadius: '0' }}>
                 <h5>Black Friday Week deals are here</h5>
-                <Grid
+                <Grid2
                   container
                   direction="column"
                   spacing={3}
@@ -515,7 +455,7 @@ const HomePage = () => {
                       Fashion
                     </a>
                   </div>
-                </Grid>
+                </Grid2>
                 <a href="/" className="shop-paragraph">Shop all deals</a>
               </Paper>
               <Paper
@@ -593,11 +533,11 @@ const HomePage = () => {
               </div>
             </Paper>
 
-          </Grid>
+          </Grid2>
         </Box>
       </main>
 
-
+      {/* Historybar */}
       <div className="historyBar d-flex flex-column justify-content-between">
         <div className="historyBarBox d-flex flex-column">
           <div className="d-flex justify-content-between">
@@ -605,10 +545,9 @@ const HomePage = () => {
               <h6>Gift ideas inspired by your shopping history</h6>
               <a href="/" className="shop-paragraph-h">Show more</a>
             </div>
-            <p>Page 1 of 2</p>
           </div>
           <div className="historyItemsBar d-flex align-items-center gap-4">
-            <button className="historyItemsButton d-flex align-items-center"><ArrowBackIosNewIcon sx={{ fontSize: 16 }} /></button>
+            <button className="historyItemsButton d-flex align-items-center"><ArrowBackIosNew sx={{ fontSize: 16 }} /></button>
             <div className="historyItemsBox d-flex flex-column">
               <img
                 src="https://images-na.ssl-images-amazon.com/images/I/51T9FwHWNhL._AC_UL165_SR165,165_.jpg"
@@ -763,7 +702,7 @@ const HomePage = () => {
               <p>Get it as soon as Monday, Dec 16</p>
               <p>FREE Shipping by Amazon</p>
             </div>
-            <button className="historyItemsButton d-flex align-items-center"><ArrowForwardIosIcon sx={{ fontSize: 16 }} /></button>
+            <button className="historyItemsButton d-flex align-items-center"><ArrowForwardIos sx={{ fontSize: 16 }} /></button>
           </div>
           <div className="personalizedRec d-flex flex-column align-items-center">
             <h4>See personalized recommendations</h4>
@@ -778,6 +717,7 @@ const HomePage = () => {
 
       <button className="topButton">Back to top</button>
 
+      {/* FooterVertical */}
       <div className="navFooterVertical">
         <div className="navFooterVerticalBox d-flex justify-content-center">
           <div className="box-1 d-flex flex-column">
@@ -822,13 +762,13 @@ const HomePage = () => {
           <img src="amazon.png" alt="amazon" className="logo" />
           <div className="d-flex gap-2">
             <a href="/" className="d-flex align-items-center">
-              <LanguageIcon sx={{ fontSize: 16, color: '#fff', mr: 1 }} />
+              <Language sx={{ fontSize: 16, color: '#fff', mr: 1 }} />
               English
               <img src="up-down-arrow.png" alt="up-down-arrow" className="up-down-arrow" />
             </a>
             <a href="/" className="d-flex align-items-center">
-            <AttachMoneyIcon sx={{ fontSize: 16, color: '#fff' }} />
-            USD - U.S. Dollar
+              <AttachMoney sx={{ fontSize: 16, color: '#fff' }} />
+              USD - U.S. Dollar
             </a>
             <a href="/" className="d-flex align-items-center">
               <img src="us-flag.png" alt="us-flag" className="us-flag" />
@@ -838,6 +778,7 @@ const HomePage = () => {
         </div>
       </div>
 
+      {/* FooterLine */}
       <div className="navFooterLine">
         <div className="navFooterLineBox d-flex justify-content-center">
           <table>

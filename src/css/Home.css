@@ -68,22 +68,6 @@ body {
     border: none;
 }
 
-.list-group-info {
-    width: 0;
-    height: 100%;
-    position: fixed;
-    top: 50px;
-    left: 0;
-    overflow: hidden;
-    transition: 0.3s;
-    z-index: 1;
-    background-color: #ffffff;
-}
-
-.list-group-info.open {
-    width: 365px;
-}
-
 .historyBar {
     width: 100%;
     padding: 40px 0px 20px 0px;
@@ -257,7 +241,6 @@ p {
     position: absolute;
     top: 96px;
     z-index: -1;
-    transition: 0.5s;
     mask-image: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 60%);
 }
 
@@ -343,10 +326,6 @@ p {
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
-}
-
-.sign:hover .dropdown-content {
-    display: block;
 }
 
 .navBarB button {
