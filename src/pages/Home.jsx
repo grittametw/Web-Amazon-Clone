@@ -76,7 +76,7 @@ const HomePage = () => {
     <body className={`body${isSidebarOpen1 ? 'sidebar-open' : ''}`}>
       {isSidebarOpen1 && <div className="overlay" onClick={toggleSidebar1}></div>}
 
-      {/* NavbarFirst */}
+      {/* HeaderNavbarFirst */}
       <nav expand="lg" className="navBar navbar-dark d-flex justify-content-between align-items-center">
         <a href="/" className="web">
           <img src="amazon.png" alt="amazon" className="logo" />
@@ -142,7 +142,7 @@ const HomePage = () => {
         </a>
       </nav>
 
-      {/* NavbarSecond & Menubar */}
+      {/* BottomPanel & Menubar */}
       <div className="B">
         <nav className="navBarB navbar-dark d-flex align-items-center">
           <button className="navbar-toggler d-flex align-items-center" onClick={toggleSidebar1}>
